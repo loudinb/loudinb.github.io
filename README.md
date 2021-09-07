@@ -1,7 +1,6 @@
 # loudinb.github.io
 
-[![build status](https://travis-ci.org/alshedivat/al-folio.svg?branch=master)](https://travis-ci.org/alshedivat/al-folio)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/alshedivat/al-folio)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/loudinb/loudinb.github.io)
 
 <br />
 
@@ -15,11 +14,8 @@ This is a container-based development environment for Visual Studio Code and the
 1. Download and intall [Docker Deskop](https://www.docker.com/products/docker-desktop).
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/download).
 3. Install [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
-4. Clone this repo (`git clone git@github.com:loudinb/loudinb.github.io.git`).
-5. Start VS Code, run the **Remote-Containers: Open Folder in Container...** command from the Command Palette (`F1`) or quick actions Status bar item, and select the repo folder cloned in the previous step.\
-<br />
-:bangbang: The initial container build process can be slow.
-
+4. Clone this repo (`git clone https://github.com/loudinb/loudinb.github.io.gitß`).
+5. Start VS Code, run the **Remote-Containers: Open Folder in Container...** command from the Command Palette (`F1`) or quick actions Status bar item, and select the repo folder cloned in the previous step.
 <br />
 
 ### Deployment
@@ -50,9 +46,7 @@ RUN gem install jekyll bundler
 ### References
 * Jekyll on Ubuntu [instructions](https://jekyllrb.com/docs/installation/ubuntu/)
 * How to use [Jekyll tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/).
-
-
-#### Deploymentß
+ß
 
 **For project pages (default):**
 

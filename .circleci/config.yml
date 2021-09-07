@@ -1,0 +1,17 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+version: 2.1
+
+# Declare the orbs that we'll use in our config.
+# read more about orbs: https://circleci.com/docs/2.0/using-orbs/
+orbs:
+  ruby: circleci/ruby@1.0
+
+workflows:
+  sample:
+    jobs:
+      build:
+        docker:
+          - image: cimage/ruby:2.7.2
+        steps:
+          - checkout
+          - run: ruby --version
