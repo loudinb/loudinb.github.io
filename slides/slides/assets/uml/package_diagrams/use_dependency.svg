@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-40.5 1099.5 341 61" width="341" height="61">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="StickArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 0 M 0 -3 L 8 0 L 0 3" fill="none" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Canvas_1" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_140">
+        <g id="Graphic_142">
+          <rect x="-40" y="1100" width="29.29293" height="9.52381" fill="white"/>
+          <rect x="-40" y="1100" width="29.29293" height="9.52381" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_141">
+          <rect x="-40" y="1108.5714" width="100" height="51.42857" fill="white"/>
+          <rect x="-40" y="1108.5714" width="100" height="51.42857" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-35 1127.2857)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="16.31836" y="11" xml:space="preserve">Support UI</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_143">
+        <g id="Graphic_145">
+          <rect x="200" y="1100" width="29.29293" height="9.52381" fill="white"/>
+          <rect x="200" y="1100" width="29.29293" height="9.52381" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_144">
+          <rect x="200" y="1108.5714" width="100" height="51.42857" fill="white"/>
+          <rect x="200" y="1108.5714" width="100" height="51.42857" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(205 1127.2857)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="22.992188" y="11" xml:space="preserve">Store UI</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_151">
+        <line x1="60" y1="1136" x2="190.1" y2="1136" marker-end="url(#StickArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_150">
+        <rect x="96.71855" y="1126" width="65" height="20" fill="white"/>
+        <text transform="translate(101.71855 1129)" fill="black">
+          <tspan font-family="Andale Mono" font-size="12" fill="black" x="2.2958965" y="11" xml:space="preserve">&lt;&lt;use&gt;&gt;</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

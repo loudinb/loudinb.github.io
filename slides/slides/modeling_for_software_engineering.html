@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="modeling_for_software_engineering_files/libs/clipboard/clipboard.min.js"></script>
+<script src="modeling_for_software_engineering_files/libs/quarto-html/tabby.min.js"></script>
+<script src="modeling_for_software_engineering_files/libs/quarto-html/popper.min.js"></script>
+<script src="modeling_for_software_engineering_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="modeling_for_software_engineering_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="modeling_for_software_engineering_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="modeling_for_software_engineering_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <title>Modeling for Software Engineering</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="modeling_for_software_engineering_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="modeling_for_software_engineering_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="modeling_for_software_engineering_files/libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="_static/styles.css">
+  <link href="modeling_for_software_engineering_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="modeling_for_software_engineering_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="modeling_for_software_engineering_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="modeling_for_software_engineering_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Modeling for Software Engineering</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section id="what-is-a-model" class="title-slide slide level2 center">
+<h2>What is a Model?</h2>
+<div class="smaller-70">
+<p>A model is a <strong>purposeful simplification</strong> of a real-world system that helps us:</p>
+<ul>
+<li>Analyze complex problems</li>
+<li>Communicate ideas effectively</li>
+<li>Test concepts before implementation</li>
+<li>Document system understanding</li>
+</ul>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Value Proposition</strong></p>
+</div>
+<div class="callout-content">
+<p>Models bridge the gap between <strong>abstract concepts</strong> and <strong>concrete implementation</strong>, making complex software systems more understandable to both technical and non-technical audiences.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="how-models-help-us" class="title-slide slide level2 center">
+<h2>How Models Help Us</h2>
+
+</section>
+<section id="todays-reality" class="slide level3">
+<h3>Today’s Reality</h3>
+<ul>
+<li>Software systems are increasingly complex</li>
+<li>Human comprehension has limits</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Question?</strong></p>
+</div>
+<div class="callout-content">
+<p>How can you make sense of systems with 40M+ lines of code (like Windows)?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="forward-engineering" class="slide level3 hide">
+<h3>Forward Engineering</h3>
+<p><strong>Forward engineering</strong>: Creating models to design software before implementation.</p>
+<ul>
+<li>Visualize system architecture and behavior</li>
+<li>Communicate designs clearly to stakeholders</li>
+<li>Evaluate plans for clarity, coherence, and quality alignment</li>
+<li>Guide implementation decisions and priorities</li>
+</ul>
+</section>
+<section id="modeling-mindset" class="slide level3 hide">
+<h3>Modeling Mindset</h3>
+<div class="bam">
+<p><strong>Think first, code second.</strong></p>
+</div>
+<aside class="notes">
+<p>Models help us think systematically about software before committing to implementation</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reverse-engineering" class="slide level3 hide">
+<h3>Reverse Engineering</h3>
+<p><strong>Reverse engineering</strong>: Creating models to understand existing software after implementation.</p>
+<ul>
+<li>Document structure and relationships of implemented systems</li>
+<li>Evaluate architectural quality and identify improvements</li>
+<li>Communicate system details to key stakeholders: developers, managers, users</li>
+</ul>
+</section>
+<section id="strategic-complexity-management" class="slide level3">
+<h3>Strategic Complexity Management</h3>
+<p>Models are about managing complexity, through <strong>engineering</strong>, which ultimately improve outcomes:</p>
+<div style="margin-top: -1em;">
+<ul>
+<li>Models provide simplified representations to manage complexity</li>
+<li>They bridge the gap between human cognitive limits and system scale</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="the-modeling-process" class="title-slide slide level2 center">
+<h2>The Modeling Process</h2>
+<p>Conceptual modeling involves <strong>developing abstractions</strong> to represent real-world entities, relationships, and rules. It helps structure and communicate knowledge about a domain, making key concepts, their properties, and interconnections <strong>understandable to both humans and machines</strong>.</p>
+</section>
+<section id="what-is-modeling" class="slide level3">
+<h3><strong>What is Modeling?</strong></h3>
+<ul>
+<li>The process of <strong>creating structured representations</strong> of systems.<br>
+</li>
+<li>Focuses on <strong>relevant details</strong> while omitting irrelevant ones.<br>
+</li>
+<li>Helps <strong>analyze, understand, and answer specific questions</strong> about a system.</li>
+</ul>
+</section>
+<section id="abstraction" class="slide level3">
+<h3>Abstraction</h3>
+<div class="smaller-80">
+<ul>
+<li><strong>What It Is</strong>: The process of classifying real-world phenomena into concepts.</li>
+<li><strong>Why It Matters</strong>: Bridges the gap between real-world systems and their models.</li>
+<li><strong>Example</strong>: Individual transactions, such as “Payment #XF29853 at 14:32:45,” are grouped under the abstract concept of “Payment”, which represents financial exchanges in a system.</li>
+</ul>
+</div>
+</section>
+<section id="from-reality-to-abstraction" class="slide level3">
+<h3>From Reality to Abstraction</h3>
+<div class="smaller-70">
+<ul>
+<li><strong>Phenomenon (Real-World Instances)</strong>
+<ul>
+<li>Concrete, observable events or objects in reality.</li>
+<li>Examples:
+<ul>
+<li>“Order #87652 submitted March 10”</li>
+<li>“Transaction #XF29853 at 14:32:45”</li>
+</ul></li>
+</ul></li>
+<li><strong>Concept (Abstract Model Constructs)</strong>
+<ul>
+<li>Abstract representations that classify related phenomena into meaningful groups</li>
+<li>Examples:
+<ul>
+<li>“Order” (a generalized representation of purchase transactions)</li>
+<li>“Payment” (a generalized representation of financial exchanges)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="concept-structure" class="slide level3 scrollable" style="padding-left: 20px;">
+<h3>Concept Structure</h3>
+<div class="smaller-70">
+<p>In formal <strong>conceptual modeling</strong>, a concept has three key aspects:</p>
+<ol type="1">
+<li><strong>Symbol</strong>: The name or representation used to denote the concept</li>
+<li><strong>Intension</strong>: The defining properties or conditions that determine membership in the concept (meaning)</li>
+<li><strong>Extension</strong>: The set of all real or possible instances to which the concept applies</li>
+</ol>
+<p>Example: “User” Concept</p>
+<div style="margin-top: -1em;">
+<ol type="1">
+<li><strong>Symbol</strong>: User</li>
+<li><strong>Intension</strong>: An entity with authentication credentials that can interact with the system</li>
+<li><strong>Extension</strong>: The set of all users who exist or could exist in the system domain</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="systems-models-views" class="slide level3 hide" data-background-image="./assets/systems_models_views.png" data-background-opacity="1" data-background-size="900px">
+<h3>Systems, Models, Views</h3>
+</section>
+<section id="system" class="slide level3" data-background-image="./assets/systems_models_views.png" data-background-opacity="0.15" data-background-size="900px">
+<h3>System</h3>
+<ul>
+<li>The complete solution being developed</li>
+<li>Encompasses all code, data, and interactions</li>
+<li>Example: Aircraft</li>
+</ul>
+</section>
+<section id="model" class="slide level3" data-background-image="./assets/systems_models_views.png" data-background-opacity="0.15" data-background-size="900px">
+<h3>Model</h3>
+<ul>
+<li>An <strong>abstraction</strong> that represents a system or part of a system.<br>
+</li>
+<li><strong>Simplifies complexity</strong> while preserving essential characteristics.<br>
+</li>
+<li>Can represent <strong>different aspects</strong>, such as <strong>structure</strong> or <strong>behavior</strong>.<br>
+</li>
+<li><strong>Example</strong>: Scale models, flight simulators.</li>
+</ul>
+</section>
+<section id="view" class="slide level3" data-background-image="./assets/systems_models_views.png" data-background-opacity="0.15" data-background-size="900px">
+<h3>View</h3>
+<ul>
+<li>Depicts <strong>selected aspects</strong> of a model</li>
+<li>Focuses on specific concerns for particular stakeholders</li>
+<li>Multiple views can represent the same model for different purposes</li>
+<li>Example: Blueprints, Instrument panel, Electrical schematics</li>
+</ul>
+</section>
+<section id="notation" class="slide level3 hide">
+<h3>Notation</h3>
+<p><strong>Notations</strong>: A set of graphical or textual rules for depicting views.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[1,1]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Provides standardized symbols and conventions (like UML)</li>
+<li>Enables consistent communication about the system</li>
+</ul>
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./assets/uml_notations.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="system-model-relationship" class="slide level3">
+<h3>System-Model Relationship</h3>
+<ul>
+<li>Models are abstractions of systems</li>
+<li>Multiple models can represent different aspects of the same system</li>
+<li>Example: Behavioral model and structural model of the same system</li>
+</ul>
+</section>
+<section id="model-view-relationship" class="slide level3">
+<h3>Model-View Relationship</h3>
+<ul>
+<li>Views present specific aspects of a model for different audiences</li>
+<li>Views and models of a single system may <strong>overlap</strong></li>
+<li>Example: Student view shows registration status; Admin view shows all registrations</li>
+</ul>
+</section>
+<section id="creating-effective-models" class="slide level3">
+<h3>Creating Effective Models</h3>
+<ul>
+<li>Balance between abstraction and detail</li>
+<li>Models should answer the specific questions stakeholders have</li>
+<li>Different notations support different types of analysis and understanding</li>
+</ul>
+</section></section>
+<section>
+<section id="types-of-models" class="title-slide slide level2 center">
+<h2>Types of Models</h2>
+
+</section>
+<section id="computational-models" class="slide level3">
+<h3>Computational Models</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[1,1]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li><strong>Purpose</strong>: Simulate dynamic, time-varying behavior</li>
+<li><strong>Examples</strong>: Weather forecasting systems, physics engines in video games</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>High complexity and development cost</li>
+<li>Often function as complete systems themselves</li>
+<li>Require specialized expertise to develop</li>
+</ul></li>
+</ul>
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./assets/computational_model-weather.webp"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="analytical-models" class="slide level3">
+<h3>Analytical Models</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[1,1]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li><strong>Purpose</strong>: Express quantitative relationships between variables</li>
+<li><strong>Examples</strong>: Financial formulas, performance prediction equations</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Mathematical in nature</li>
+<li>Provide precise calculations and predictions</li>
+<li>Enable “what-if” scenario testing</li>
+</ul></li>
+</ul>
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./assets/analytical_model-linear_regression.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="descriptive-models-our-focus" class="slide level3">
+<h3>Descriptive Models (Our Focus)</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[1,1]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li><strong>Purpose</strong>: Visualize system structure and behavior</li>
+<li><strong>Examples</strong>: Software architecture diagrams, data models, workflow charts</li>
+<li><strong>Characteristics</strong>:
+<ul>
+<li>Primarily qualitative rather than quantitative</li>
+<li>Accessible to create and understand</li>
+<li>Comparable to architectural blueprints</li>
+</ul></li>
+</ul>
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./assets/descriptive_model-data.png"></p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="common-descriptive-models-in-software-design" class="title-slide slide level2 center">
+<h2>Common Descriptive Models in Software Design</h2>
+
+</section>
+<section id="data-models" class="slide level3">
+<h3>Data Models</h3>
+<ul>
+<li>Focus on information structure</li>
+<li>Represent entities, attributes, and relationships</li>
+<li><strong>Examples</strong>: Entity-Relationship Diagrams (ERDs)</li>
+</ul>
+</section>
+<section id="application-models" class="slide level3">
+<h3>Application Models</h3>
+<ul>
+<li>Focus on software behavior and structure</li>
+<li>Represent processes, interactions, and components</li>
+<li><strong>Primary Example</strong>: UML (Unified Modeling Language)</li>
+</ul>
+</section></section>
+<section>
+<section id="related-uml-modeling-languages" class="title-slide slide level2 center">
+<h2>Related UML Modeling Languages</h2>
+
+</section>
+<section id="sysml-systems-modeling-language" class="slide level3">
+<h3>SysML (Systems Modeling Language)</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[50,50]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Extension of UML specifically designed to supports model-based systems engineering (MBSE) methodologies
+<ul>
+<li>Broader scope beyond software (hardware, processes, facilities, …)</li>
+</ul></li>
+<li>Shares several diagram types with UML but adds system-specific diagrams</li>
+<li>Enables modeling of complex systems like aircraft, industrial plants, or medical devices</li>
+</ul>
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./assets/sysml-vs-uml.png"></p>
+</div>
+</div>
+</div>
+<div class="smaller-60">
+<ul>
+<li><strong>Key additions</strong>:
+<ul>
+<li>Requirement diagrams: Capture and trace system requirements</li>
+<li>Parametric diagrams: Model engineering constraints and physical laws</li>
+<li>Block definition diagrams: Define system hierarchies and classifications</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="bpmn-business-process-model-and-notation" class="slide level3">
+<h3>BPMN (Business Process Model and Notation)</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[50,50]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Specialized for business processes and workflows</li>
+<li>Targets business stakeholders rather than engineers</li>
+<li>Focuses on operational procedures and decision points</li>
+</ul>
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="./assets/BPMN.png"></p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="unified-modeling-language-uml" class="title-slide slide level2 center" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.15" data-background-size="80%">
+<h2>Unified Modeling Language (UML)</h2>
+<p>UML is a standardized family of graphical notations for visualizing, specifying, constructing, and documenting software systems.</p>
+</section>
+<section id="key-characteristics" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Key Characteristics</h3>
+<ul>
+<li><strong>Purpose</strong>: Visually represent software architecture and behavior</li>
+<li><strong>Scope</strong>: Primarily for object-oriented systems, but applicable to various software types</li>
+<li><strong>Structure</strong>: Comprises 14 different diagram types, each with specific purposes</li>
+<li><strong>Flexibility</strong>: Adapts to different levels of detail and development phases</li>
+</ul>
+</section>
+<section id="evolution-governance" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Evolution &amp; Governance</h3>
+<ul>
+<li><strong>Origin</strong>: First published in 1994</li>
+<li><strong>Standardization</strong>:
+<ul>
+<li>Became OMG standard in 1997</li>
+<li>Recognized as ISO standard in 2005</li>
+</ul></li>
+<li><strong>Current Standard</strong>: Version 2.5 (released 2015)</li>
+<li><strong>Governing Body</strong>: Object Management Group (OMG)</li>
+</ul>
+<aside class="notes">
+<p>The de facto standard language for software modeling in modern software engineering practice</p>
+<p>OMG (Object Management Group) - An international, non-profit technology standards consortium established in 1989. OMG creates and maintains standards for software modeling, middleware, and enterprise integration. When UML became an “OMG standard” in 1997, it meant the specification was formally adopted, would be consistently maintained, and provided a common framework for implementation across the industry.</p>
+<p>ISO (International Organization for Standardization) - A global federation of national standards bodies from over 160 countries. ISO standards represent international consensus on best practices and specifications across virtually all industries. UML’s adoption as an ISO standard in 2005 (ISO/IEC 19505) elevated its status from an industry standard to an internationally recognized specification, further solidifying its prominence in software engineering.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="why-use-uml" class="title-slide slide level2 center" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.15" data-background-size="80%">
+<h2>Why Use UML?</h2>
+
+</section>
+<section id="blueprint-your-software-with-precision" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Blueprint Your Software with Precision</h3>
+<ul>
+<li>Provides <strong>formal notation</strong> for designing new software</li>
+<li>Offers <strong>structured approach</strong> for documenting existing systems</li>
+<li>Comprises <strong>14 different diagram types</strong>, each with specific purposes</li>
+</ul>
+</section>
+<section id="transform-complex-ideas-into-clear-designs" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Transform Complex Ideas into Clear Designs</h3>
+<ul>
+<li><strong>Forces structured thinking</strong> about software architecture</li>
+<li>Prevents overlooking <strong>complex design challenges</strong></li>
+<li>Encourages addressing <strong>difficult aspects</strong> that might be avoided</li>
+</ul>
+</section>
+<section id="visualize-systems-at-every-scale" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Visualize Systems at Every Scale</h3>
+<ul>
+<li>Enables visualization at <strong>different abstraction levels</strong>:
+<ul>
+<li>Class level (detailed implementation)</li>
+<li>Component level (functional units)</li>
+<li>Package level (organizational structure)</li>
+</ul></li>
+</ul>
+</section>
+<section id="bridge-the-communication-gap" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Bridge the Communication Gap</h3>
+<ul>
+<li>Serves as a <strong>common language</strong> among software professionals</li>
+<li>Communicates system architecture <strong>without code examination</strong></li>
+<li>Facilitates discussions between <strong>technical and non-technical stakeholders</strong></li>
+<li>Accelerates <strong>onboarding of new developers</strong> and non-technical stakeholders**</li>
+<li>Accelerates <strong>onboarding of new developers</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="uml-diagram-types" class="title-slide slide level2 hide center" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="1.0" data-background-size="80%">
+<h2>UML Diagram Types</h2>
+
+</section>
+<section id="structural-diagrams" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Structural Diagrams</h3>
+<p><strong>Purpose</strong>: Visualize the static architecture of a system</p>
+<div class="smaller-65">
+<p><strong>Core Structural Diagrams</strong>:</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li><strong>Class Diagram</strong>: Represents the classes, their attributes, methods, and relationships.</li>
+<li><strong>Component Diagram</strong>: Shows the components of a system and their dependencies.</li>
+<li><strong>Composite Structure Diagram</strong>: Illustrates the internal structure of a class and its interactions with other classes.</li>
+<li><strong>Deployment Diagram</strong>: Depicts the physical deployment of artifacts on nodes.</li>
+<li><strong>Object Diagram</strong>: Represents a snapshot of the system at a particular point in time, showing objects and their relationships.</li>
+<li><strong>Package Diagram</strong>: Organizes the system into packages and shows their dependencies.</li>
+<li><strong>Profile Diagram</strong>: Defines custom stereotypes, tagged values, and constraints for UML elements.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="behavioral-diagrams" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>Behavioral Diagrams</h3>
+<p><strong>Purpose</strong>: Capture the dynamic interactions within a system</p>
+<div class="smaller-55">
+<p><strong>Core Behavioral Diagrams</strong>:</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li><strong>Use Case Diagram</strong>: Illustrates the interactions between actors and the system.</li>
+<li><strong>Activity Diagram</strong>: Represents the flow of activities and actions in a system.</li>
+<li><strong>State Machine Diagram</strong>: Shows the states of an object and the transitions between those states.</li>
+</ul>
+</div>
+<p><strong>Interaction Diagrams</strong> (subset of Behavioral):</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li><strong>Sequence Diagram</strong>: Represents the interactions between objects in a time-ordered sequence.</li>
+<li><strong>Communication Diagram</strong>: Shows the interactions between objects in a network-like structure.</li>
+<li><strong>Timing Diagram</strong>: Represents the timing constraints and interactions between objects over time.</li>
+<li><strong>Interaction Overview Diagram</strong>: Combines activity and sequence diagrams to show the flow of control between interactions.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="uml-diagram-selection-guide" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>UML Diagram Selection Guide</h3>
+<div class="smaller-70">
+<p><strong>For System Architecture</strong>:</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li>Component, Package, and Deployment diagrams</li>
+</ul>
+</div>
+<p><strong>For Detailed Design</strong>:</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li>Class, Object, and Composite Structure diagrams</li>
+</ul>
+</div>
+<p><strong>For Process Modeling</strong>:</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li>Activity, Use Case, and State Machine diagrams</li>
+</ul>
+</div>
+<p><strong>For Object Interactions</strong>:</p>
+<div style="margin-top: -1.0em;">
+<ul>
+<li>Sequence, Communication, and Timing diagrams</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="uml-diagram-usage" class="slide level3" data-background-image="./assets/uml_diagram_types.svg" data-background-opacity="0.10" data-background-size="80%">
+<h3>UML Diagram Usage</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[15,70,15]]">
+<div class="quarto-layout-row">
+<div id="first-row" class="smaller-60 quarto-layout-cell" style="flex-basis: 15.0%;justify-content: flex-start;">
+
+</div>
+<div id="second-row" class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<p><img data-src="./assets/uml_diagram_usage_survey.png"></p>
+</div>
+<div id="third-row" class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: flex-start;">
+
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="challenges-with-using-uml" class="title-slide slide level2 center">
+<h2>Challenges With Using UML</h2>
+
+</section>
+<section id="complexity-vs.-practicality" class="slide level3">
+<h3>Complexity vs.&nbsp;Practicality</h3>
+<ul>
+<li>UML specification exceeds 700 pages, creating a steep learning curve</li>
+<li>Grady Booch principle: “For 80% of all software, only 20% of UML is needed”</li>
+<li>Focus on mastering the core diagrams most relevant to your work</li>
+</ul>
+</section>
+<section id="notation-inconsistency" class="slide level3">
+<h3>Notation Inconsistency</h3>
+<ul>
+<li>Problem: Varied interpretation and application of UML notation across teams</li>
+<li>Impact: Reduces diagram readability and increases misunderstandings</li>
+<li>Mitigation:
+<ul>
+<li>Establish team-wide notation standards</li>
+<li>Include legends with non-standard elements</li>
+<li>Prioritize clarity over notational purity</li>
+</ul></li>
+</ul>
+</section>
+<section id="time-investment" class="slide level3">
+<h3>Time Investment</h3>
+<ul>
+<li>Creating detailed UML diagrams requires significant effort</li>
+<li>Value proposition: Is the diagram saving more time than it takes to create?</li>
+<li>Best practice: Match diagram detail level to its communication purpose
+<ul>
+<li>Quick sketches for temporary discussions</li>
+<li>Detailed documentation for critical architecture</li>
+</ul></li>
+</ul>
+</section>
+<section id="maintenance-burden" class="slide level3">
+<h3>Maintenance Burden</h3>
+<ul>
+<li>Diagrams become technical debt if not updated with code changes</li>
+<li>Fast-evolving codebases quickly render static diagrams obsolete</li>
+<li>Practical solutions:
+<ul>
+<li>Leverage IDE-based diagram generation tools</li>
+<li>Focus on stable architectural views</li>
+<li>Document architectural decisions rather than implementation details</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="computer-aided-software-engineering-case-tools" class="title-slide slide level2 center">
+<h2>Computer-Aided Software Engineering (CASE) Tools</h2>
+
+</section>
+<section id="case-tools-overview" class="slide level3 hide">
+<h3>CASE Tools Overview</h3>
+<div class="smaller-85">
+<p><strong>Computer-Aided Software Engineering (CASE) tools</strong> support various SDLC tasks:</p>
+<div style="margin-top: -1em;">
+<ul>
+<li>Creating UML models and diagrams</li>
+<li>Reverse engineering code into models</li>
+<li>Generating code from models</li>
+<li>Non-UML CASE tools:
+<ul>
+<li>Data modeling tools (ERD)</li>
+<li>Business process modeling tools (BPMN)</li>
+<li>Requirements management tools</li>
+<li>Analyzing code complexity</li>
+<li>Calculating software metrics</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="available-uml-tools" class="slide level3">
+<h3>Available UML Tools</h3>
+<ul>
+<li><strong><a href="https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools">40+ tools</a></strong> in the market according to Wikipedia</li>
+<li><strong>Proprietary tools</strong>:
+<ul>
+<li>Microsoft Visio</li>
+<li>IBM Rational Rose</li>
+</ul></li>
+<li><strong>Open-source tools</strong>:
+<ul>
+<li>Visual Paradigm</li>
+<li>PlantUML</li>
+<li>StarUML</li>
+</ul></li>
+</ul>
+</section>
+<section id="usage-core-principles" class="slide level3">
+<h3>Usage Core Principles</h3>
+<ul>
+<li>Modeling is a creative activity requiring iteration</li>
+<li>Tools can constrain early creative thinking</li>
+<li>Start with paper sketches or whiteboard for maximum flexibility</li>
+</ul>
+</section>
+<section id="practical-progression" class="slide level3">
+<h3>Practical Progression</h3>
+<ul>
+<li>Begin with low-fidelity tools during initial concept exploration</li>
+<li>Move to digital tools when designs become more stable</li>
+<li>Consider maintenance requirements for long-term documentation</li>
+</ul>
+</section></section>
+<section>
+<section id="axe-sharpening" class="title-slide slide level2 hide center">
+<h2>Axe Sharpening</h2>
+<div class="bam">
+<p>“If I had six hours to chop down a tree, I’d spend the first four sharpening the axe.”</p>
+<p>– Unknown</p>
+</div>
+</section>
+<section id="preparation-is-key" class="slide level3 hide">
+<h3>Preparation is Key</h3>
+<p>This quote underscores the importance of preparation, modeling is your axe-sharpening process:</p>
+<ul>
+<li>Helps you think about what you’re building</li>
+<li>Facilitates feedback</li>
+<li>Identifies areas for improvement</li>
+</ul>
+<aside class="notes">
+<p>The quote is a reminder to invest time in preparation and skill development.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="modeling_for_software_engineering_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

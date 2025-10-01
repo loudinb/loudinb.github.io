@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lab 4: UML, GitHub Project and Issues &#8212; Software Engineering (EECE3093C / CS3093C)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3afe5843" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/lab4';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project Overview" href="../project/overview.html" />
+    <link rel="prev" title="Lab 3: Emphasizing Software Quality" href="lab3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../syllabus/20EECE3093C.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/uc_logo.svg" class="logo__image only-light" alt="Software Engineering (EECE3093C / CS3093C) - Home"/>
+    <script>document.write(`<img src="../_static/uc_logo.svg" class="logo__image only-dark" alt="Software Engineering (EECE3093C / CS3093C) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../syllabus/20EECE3093C.html">
+                    Software Engineering
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/25ss/25ss.html">Spring Semester 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/instructor-information.html">Instructor Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/assessment-plan-and-policies.html">Assessment Plan and Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/grading-policy.html">Grading Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/university-policies.html">University Policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exam Knowledge Checks</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exams/exam1.html">Exam 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/history_of_software_engineering.html">History of Software Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/how_to_work_well_on_teams.html">How to Work Well on Teams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_crisis.html">Software Crisis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_engineering_as_a_layered_technology.html">Software Engineering as a Layered Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_engineering_as_a_layered_technology_2.html">Software Engineering as a Layered Technology (Part 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_engineering_code.html">Software Engineering Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/the_1968_69_nato_software_engineering_reports.html">The 1968/69 NATO Software Engineering Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/the_mythical_man_month.html">The Mythical Man-Month</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/what_is_software_engineering.html">What is Software Engineering?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/what_is_software_engineering_2.html">What is Software Engineering? (Part 2)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exams/exam2.html">Exam 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/containerization_vs_virtualization.html">Containerization vs Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/demystifying_containers_part_I_kernel_space.html">Demystifying Containers - Part I: Kernel Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/docker_getting_started.html">Docker - Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/github_codespaces_overview.html">GitHub Codespaces Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/knowledge_sharing.html">Knowledge Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/leading_at_scale.html">Leading at Scale</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab Assignments</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lab1.html">Lab 1: Version Control Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab2.html">Lab 2: Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab3.html">Lab 3: Emphasizing Software Quality</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 4: UML, GitHub Project and Issues</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../project/overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/checkpoint1.html">Checkpoint 1: Project Selection (25% of Project Grade)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/checkpoint2.html">Checkpoint 2: Software Development Life Cycle (SDLC) Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/checkpoint3.html">Checkpoint 3: Contribution to Open-Source Project</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faqs.html">FAQs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faqs/github_student_benefits.html">GitHub Student Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faqs/oreilly_access.html">How do I access O’Reilly books?</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../external-links.html">External Links</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference external" href="https://github.com">GitHub</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Odds and End</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../disclaimer.html">Disclaimer</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/labs/lab4.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lab 4: UML, GitHub Project and Issues</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code">The Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract-animal-class">Abstract Animal Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dog-class">Dog Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cat-class">Cat Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bird-class">Bird Class</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-accept-the-github-organization-invitation">Task 1: Accept the GitHub Organization Invitation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-accept-github-classroom-assignment">Task 2: Accept GitHub Classroom Assignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-create-github-project-board">Task 3: Create GitHub Project Board</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-add-items-to-the-project-board">Task 4: Add Items to the Project Board</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-visual-uml-class-diagram-with-draw-io">Task 5: Visual UML Class Diagram with draw.io</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-code-based-uml-class-diagram-with-mermaid">Task 6: Code-based UML Class Diagram with Mermaid</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional Information</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linking-issues-to-commits">Linking Issues to Commits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid">Mermaid</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#following-proper-uml-notation-guidelines">Following proper UML notation guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-rubric">Grading Rubric</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-4-uml-github-project-and-issues">
+<h1>Lab 4: UML, GitHub Project and Issues<a class="headerlink" href="#lab-4-uml-github-project-and-issues" title="Link to this heading">#</a></h1>
+<p>In this lab, you will gain hands-on experience creating UML class diagrams from existing Java code using graphical diagramming tools such as <strong><a class="reference external" href="http://draw.io">draw.io</a></strong>, as well as generating diagrams programmatically with <strong>Mermaid</strong> syntax. This lab assignment will strengthen your ability to visually communicate object-oriented designs, and enhance your project management skills by utilizing GitHub projects and issues, including creating, organizing, and writing clear, actionable issues to manage development tasks efficiently.</p>
+<section id="the-code">
+<h2>The Code<a class="headerlink" href="#the-code" title="Link to this heading">#</a></h2>
+<p>The code provided below represents a simple Java application that models an animal hierarchy. You will be creating UML class diagrams based on this code.</p>
+<section id="abstract-animal-class">
+<h3>Abstract Animal Class<a class="headerlink" href="#abstract-animal-class" title="Link to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Animal</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="dog-class">
+<h3>Dog Class<a class="headerlink" href="#dog-class" title="Link to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">breed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">breed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getBreed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">breed</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Woof!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fetch</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is fetching!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="cat-class">
+<h3>Cat Class<a class="headerlink" href="#cat-class" title="Link to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Cat</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lives</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Cat</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">lives</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getLives</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">lives</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">loseLive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lives</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">lives</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Meow!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="bird-class">
+<h3>Bird Class<a class="headerlink" href="#bird-class" title="Link to this heading">#</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Bird</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">canFly</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Bird</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">canFly</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">canFly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">canFly</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">getCanFly</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">canFly</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Tweet!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fly</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">canFly</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; is flying high!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; cannot fly!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Link to this heading">#</a></h2>
+<section id="task-1-accept-the-github-organization-invitation">
+<h3>Task 1: Accept the GitHub Organization Invitation<a class="headerlink" href="#task-1-accept-the-github-organization-invitation" title="Link to this heading">#</a></h3>
+<p>You should have recieved an email invitation to join the UC3093C GitHub organization.  Accept the invitation to join the organization. You will need to be a member of this organization to complete the lab.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/github_uc3093c_invite.png"><img alt="fishy" class="align-center" src="../_images/github_uc3093c_invite.png" style="width: 200px;" />
+</a>
+<br>
+<p>If you have not received this email, please check your spam folder.  If you still do not see it, please contact me.</p>
+</section>
+<section id="task-2-accept-github-classroom-assignment">
+<h3>Task 2: Accept GitHub Classroom Assignment<a class="headerlink" href="#task-2-accept-github-classroom-assignment" title="Link to this heading">#</a></h3>
+<p>Accept the the following GitHub Classroom assignment invitation, this will create a personal repository in the UC3093C organization.  You will be using this repository to manage your project and submit your work.</p>
+<p><a class="reference external" href="https://classroom.github.com/a/w13UuPS-">https://classroom.github.com/a/w13UuPS-</a></p>
+</section>
+<section id="task-3-create-github-project-board">
+<h3>Task 3: Create GitHub Project Board<a class="headerlink" href="#task-3-create-github-project-board" title="Link to this heading">#</a></h3>
+<p>Create a GitHub project board in your repository to manage your tasks, you must use the Kanban template.  The name of the project should be your GitHub username followed by “Lab 4”.  For example, “&#64;loudinb’s Lab 4”.</p>
+<p>You must modify the board to have only the following columns:</p>
+<ul class="simple">
+<li><p>To-Do</p></li>
+<li><p>In Progress</p></li>
+<li><p>Done</p></li>
+</ul>
+</section>
+<section id="task-4-add-items-to-the-project-board">
+<h3>Task 4: Add Items to the Project Board<a class="headerlink" href="#task-4-add-items-to-the-project-board" title="Link to this heading">#</a></h3>
+<p>Create two items in the “To-Do” column of your project board.  These items will represent the tasks you will be completing in this lab.  You will name these items as follows:</p>
+<ol class="arabic simple">
+<li><p>“Create UML class diagram using <a class="reference external" href="http://draw.io">draw.io</a>”</p></li>
+<li><p>“Create UML class diagram using Mermaid”</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You must create these items as issues which are linked to your GitHub repository.  Read the instructions carefully to ensure you are creating issues properly.</p>
+</div>
+<p>You can create these items by clicking on the “+ Add-Item” icon in the “To-Do” column.  Select the option to “Create new issue”. In the dialog that appears, select the GitHub repository created for Lab 4.</p>
+<br>
+<a class="reference internal image-reference" href="../_images/github_project_create_new_issue.png"><img alt="fishy" class="align-center" src="../_images/github_project_create_new_issue.png" style="width: 600px;" />
+</a>
+<br>
+<p>Select the “Blank issue” option and then complete the issue using the following markdown template for your issue description, just copy and paste into your issue description (make sure to make minor adjustments to the template to fit your specific task).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Description</span>
+<span class="n">Create</span> <span class="n">a</span> <span class="n">UML</span> <span class="k">class</span><span class="w"> </span><span class="nc">diagram</span> <span class="n">that</span> <span class="n">accurately</span> <span class="n">represents</span> <span class="n">the</span> <span class="n">Animal</span> <span class="k">class</span><span class="w"> </span><span class="nc">hierarchy</span> <span class="n">using</span> <span class="p">[</span><span class="n">draw</span><span class="o">.</span><span class="n">io</span> <span class="n">OR</span> <span class="n">Mermaid</span><span class="p">]</span><span class="o">.</span>
+
+<span class="c1">## Requirements</span>
+<span class="o">-</span> <span class="n">Represent</span> <span class="nb">all</span> <span class="n">four</span> <span class="n">classes</span><span class="p">:</span> <span class="n">Animal</span><span class="p">,</span> <span class="n">Dog</span><span class="p">,</span> <span class="n">Cat</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Bird</span>
+<span class="o">-</span> <span class="n">Show</span> <span class="nb">all</span> <span class="n">attributes</span> <span class="k">with</span> <span class="n">proper</span> <span class="n">visibility</span> <span class="n">notation</span>
+<span class="o">-</span> <span class="n">Show</span> <span class="nb">all</span> <span class="n">methods</span> <span class="k">with</span> <span class="n">proper</span> <span class="n">visibility</span> <span class="n">notation</span>
+<span class="o">-</span> <span class="n">Include</span> <span class="k">return</span> <span class="n">types</span> <span class="ow">and</span> <span class="n">parameters</span> <span class="k">for</span> <span class="n">methods</span>
+<span class="o">-</span> <span class="n">Properly</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">abstract</span> <span class="k">class</span><span class="w"> </span><span class="nc">and</span> <span class="n">abstract</span> <span class="n">method</span>
+<span class="o">-</span> <span class="n">Show</span> <span class="nb">all</span> <span class="n">inheritance</span> <span class="n">relationships</span>
+<span class="o">-</span> <span class="n">Follow</span> <span class="n">standard</span> <span class="n">UML</span> <span class="n">notation</span>
+
+<span class="c1">## Acceptance Criteria</span>
+
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">All</span> <span class="n">classes</span> <span class="n">are</span> <span class="n">correctly</span> <span class="n">represented</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">All</span> <span class="n">attributes</span> <span class="n">are</span> <span class="n">shown</span> <span class="k">with</span> <span class="n">proper</span> <span class="n">visibility</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">All</span> <span class="n">methods</span> <span class="n">are</span> <span class="n">shown</span> <span class="k">with</span> <span class="n">proper</span> <span class="n">visibility</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Abstract</span> <span class="k">class</span><span class="w"> </span><span class="nc">and</span> <span class="n">method</span> <span class="n">are</span> <span class="n">properly</span> <span class="n">indicated</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Inheritance</span> <span class="n">relationships</span> <span class="n">are</span> <span class="n">correctly</span> <span class="n">shown</span>
+<span class="o">-</span> <span class="p">[</span> <span class="p">]</span> <span class="n">Diagram</span> <span class="ow">is</span> <span class="n">committed</span> <span class="n">to</span> <span class="n">the</span> <span class="n">repository</span> <span class="k">as</span> <span class="p">[</span><span class="n">image</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">markdown</span> <span class="n">file</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>When creating the issue you must:</p>
+<ul class="simple">
+<li><p>Use the issue template (in markdown syntax) provided above.</p></li>
+<li><p>Assign the issues to yourself.</p></li>
+<li><p>Add “documentation” as a label.</p></li>
+<li><p>Add “UML” as a label, but you will need to create this label first. Use “UML” as the name and “UML diagrams” for the description.</p></li>
+<li><p>Specify “Task” as the issue type.</p></li>
+</ul>
+<p>When viewed from the project board, an issue should look like this:</p>
+<br>
+<a class="reference internal image-reference" href="../_images/github_issue.png"><img alt="fishy" class="align-center" src="../_images/github_issue.png" style="width: 600px;" />
+</a>
+<br>
+</section>
+<section id="task-5-visual-uml-class-diagram-with-draw-io">
+<h3>Task 5: Visual UML Class Diagram with <a class="reference external" href="http://draw.io">draw.io</a><a class="headerlink" href="#task-5-visual-uml-class-diagram-with-draw-io" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Move this issue to “In Progress” in your Kanban board</p></li>
+<li><p>Create a complete UML class diagram using <a class="reference external" href="http://draw.io">draw.io</a> that represents all four classes in the code</p></li>
+<li><p>Export the diagram as a PNG or JPEG file</p></li>
+<li><p>Commit this file to your repository with the message “Completed UML class diagram in <a class="reference external" href="http://draw.io">draw.io</a> - fixes #X” (where X is your issue number)</p></li>
+<li><p>Move the issue to “Done” in your Kanban board</p></li>
+</ol>
+</section>
+<section id="task-6-code-based-uml-class-diagram-with-mermaid">
+<h3>Task 6: Code-based UML Class Diagram with Mermaid<a class="headerlink" href="#task-6-code-based-uml-class-diagram-with-mermaid" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Move this issue to “In Progress” in your Kanban board</p></li>
+<li><p>Create a markdown file in your repository named <code class="docutils literal notranslate"><span class="pre">UML-class-diagram.md</span></code></p></li>
+<li><p>Use Mermaid syntax to create the class diagram in this file</p></li>
+<li><p>Commit the file with the message “Completed UML class diagram in Mermaid - fixes #Y” (where Y is your issue number)</p></li>
+<li><p>Move the issue to “Done” in your Kanban board</p></li>
+</ol>
+</section>
+</section>
+<section id="additional-information">
+<h2>Additional Information<a class="headerlink" href="#additional-information" title="Link to this heading">#</a></h2>
+<section id="linking-issues-to-commits">
+<h3>Linking Issues to Commits<a class="headerlink" href="#linking-issues-to-commits" title="Link to this heading">#</a></h3>
+<p>When you commit your changes, you should include the issue number in the commit message. This will help you track which commits are related to which issues. For example, if you are working on issue #1, you can include “#1” in your commit message. This will create a link between the commit and the issue, making it easier to track progress and see which issues have been resolved.</p>
+<p>There are special keywords that you can use in your commit messages to automatically close issues when the commit is pushed to the main branch. For example, if you want to close issue #1 when you push your commit, you can include the keyword “fixes” followed by the issue number in your commit message. For example, you can write:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Completed UML class diagram in draw.io - fixes #1&quot;</span>
+</pre></div>
+</div>
+<p>This will automatically close issue #1 when the commit is pushed to the main branch.</p>
+<p>See <a class="reference external" href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests">GitHub documentation</a> for more information on closing issues with commit messages.</p>
+</section>
+<section id="mermaid">
+<h3>Mermaid<a class="headerlink" href="#mermaid" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://mermaid.js.org">Mermaid</a> is a JavaScript-based diagramming and charting tool that uses Markdown-inspired syntax. It allows you to create diagrams and visualizations directly in your markdown files.</p>
+<p>Mermaid supports various types of diagrams, including flowcharts, sequence diagrams, and class diagrams. In this lab, you will use Mermaid to create a class diagram that represents the same classes and relationships as in the <a class="reference external" href="http://draw.io">draw.io</a> diagram.  Please see the <a class="reference external" href="https://mermaid.js.org/syntax/classDiagram.html">Mermaid class diagram documentation</a> for more details on syntax and features.</p>
+<p>GitHub supports rendering Mermaid diagrams directly in markdown files, so you can include your class diagram in the <code class="docutils literal notranslate"><span class="pre">UML-class-diagram.md</span></code> file you create.</p>
+</section>
+</section>
+<section id="grading">
+<h2>Grading<a class="headerlink" href="#grading" title="Link to this heading">#</a></h2>
+<section id="deliverables">
+<h3>Deliverables<a class="headerlink" href="#deliverables" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>A GitHub repository containing:</p>
+<ul class="simple">
+<li><p>PNG/JPEG file of your <a class="reference external" href="http://draw.io">draw.io</a> UML class diagram</p></li>
+<li><p>A markdown file named <code class="docutils literal notranslate"><span class="pre">UML-diagram.md</span></code> with Mermaid code for the class diagram</p></li>
+</ul>
+</li>
+<li><p>GitHub Issues that are properly closed by your commits from the commit message, for example, “Create UML class diagram using <a class="reference external" href="http://draw.io">draw.io</a> fixes #1”</p></li>
+<li><p>A completed GitHub Project board showing your workflow progression (both tasks should be in the “Done” column)</p></li>
+</ol>
+</section>
+<section id="following-proper-uml-notation-guidelines">
+<h3>Following proper UML notation guidelines<a class="headerlink" href="#following-proper-uml-notation-guidelines" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Class Representation</strong>:</p>
+<ul class="simple">
+<li><p>Regular classes: Rectangle with solid lines</p></li>
+<li><p>Abstract classes: Rectangle with solid lines, class name in <em>italics</em></p></li>
+</ul>
+</li>
+<li><p><strong>Visibility Modifiers</strong>:</p>
+<ul class="simple">
+<li><p>Public: +</p></li>
+<li><p>Private: -</p></li>
+<li><p>Protected: #</p></li>
+<li><p>Package: ~ (no modifier)</p></li>
+</ul>
+</li>
+<li><p><strong>Methods</strong>:</p>
+<ul class="simple">
+<li><p>Format: visibility name(parameters): returnType</p></li>
+<li><p>Abstract methods should be in <em>italics</em></p></li>
+</ul>
+</li>
+<li><p><strong>Attributes</strong>:</p>
+<ul class="simple">
+<li><p>Format: visibility name: type</p></li>
+</ul>
+</li>
+<li><p><strong>Inheritance</strong>:</p>
+<ul class="simple">
+<li><p>Shown with an arrow pointing from the subclass to the superclass</p></li>
+<li><p>Use a solid line with a hollow triangular arrowhead</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="grading-rubric">
+<h3>Grading Rubric<a class="headerlink" href="#grading-rubric" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Correct representation of classes and relationships in class diagram, proper use of UML notation for visibility, abstract classes, and methods (50%)</p>
+<ul>
+<li><p>Correct implementation using <a class="reference external" href="http://draw.io">draw.io</a> diagram (25%)</p></li>
+<li><p>Correct implementation using Mermaid diagram (25%)</p></li>
+</ul>
+</li>
+<li><p>Proper use of GitHub Project and Issues with correct issue template (50%)</p>
+<ul>
+<li><p>Created a project board with the correct columns (5%)</p></li>
+<li><p>Correctly created both GitHub Issues - name, description, assignee, labels, type (20%)</p></li>
+<li><p>Isuues linked to your GitHub repository and a proper commit message to automaticaly close the issue (moving it to Done). (25%)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lab3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lab 3: Emphasizing Software Quality</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../project/overview.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project Overview</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code">The Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract-animal-class">Abstract Animal Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dog-class">Dog Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cat-class">Cat Class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bird-class">Bird Class</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-accept-the-github-organization-invitation">Task 1: Accept the GitHub Organization Invitation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-accept-github-classroom-assignment">Task 2: Accept GitHub Classroom Assignment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-create-github-project-board">Task 3: Create GitHub Project Board</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-add-items-to-the-project-board">Task 4: Add Items to the Project Board</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-visual-uml-class-diagram-with-draw-io">Task 5: Visual UML Class Diagram with draw.io</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-code-based-uml-class-diagram-with-mermaid">Task 6: Code-based UML Class Diagram with Mermaid</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-information">Additional Information</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linking-issues-to-commits">Linking Issues to Commits</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid">Mermaid</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading">Grading</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#following-proper-uml-notation-guidelines">Following proper UML notation guidelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-rubric">Grading Rubric</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Loudin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

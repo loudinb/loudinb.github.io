@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-853 259.5 301 491" width="301" height="491">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="SharpArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-5 -5 12 10" markerWidth="12" markerHeight="10" color="black">
+      <g>
+        <path d="M 6 0 L -3.6 -3.6 L 0 0 L 0 0 L -3.6 3.6 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Canvas_4" fill="none" stroke="none" stroke-opacity="1" fill-opacity="1" stroke-dasharray="none">
+    <title>Canvas 4</title>
+    <g id="Canvas_4_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_9">
+        <g id="Graphic_14">
+          <rect x="-852.5" y="580" width="300" height="170" fill="white"/>
+          <rect x="-852.5" y="580" width="300" height="170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-847.5 646.04395)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="83.56" y="15" xml:space="preserve">&lt;&lt;Component&gt;&gt;</tspan>
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="16" fill="black" x="117.888" y="34.448" xml:space="preserve">Logger</tspan>
+          </text>
+        </g>
+        <g id="Group_10">
+          <g id="Graphic_13">
+            <rect x="-610" y="600" width="37.5" height="40" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_12">
+            <rect x="-622.5" y="620" width="25" height="7.5" fill="white"/>
+            <rect x="-622.5" y="620" width="25" height="7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+          <g id="Graphic_11">
+            <rect x="-622.5" y="607.5" width="25" height="7.5" fill="white"/>
+            <rect x="-622.5" y="607.5" width="25" height="7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Graphic_8">
+        <rect x="-852.5" y="260" width="300" height="170" fill="white"/>
+        <rect x="-852.5" y="260" width="300" height="170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-847.5 326.04395)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="101.064" y="15" xml:space="preserve">&lt;&lt;artifact&gt;&gt;</tspan>
+          <tspan font-family="Helvetica Neue" font-weight="bold" font-size="16" fill="black" x="121.616" y="34.448" xml:space="preserve">logfile</tspan>
+        </text>
+      </g>
+      <g id="Line_2">
+        <line x1="-702.5" y1="430" x2="-702.5" y2="572.1" marker-end="url(#SharpArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8.0,5.0" stroke-width="1"/>
+      </g>
+      <g id="Group_20">
+        <g id="Line_18">
+          <path d="M -583.30556 280 L -599.5119 280 L -599.5119 320 L -572.5 320 L -572.5 293.33333 L -583.30556 280" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Line_17">
+          <path d="M -583.30556 280 L -583.30556 293.33333 L -572.5 293.33333 L -572.5 293.33333" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

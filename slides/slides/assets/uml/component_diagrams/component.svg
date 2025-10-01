@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-363 -83 301 171" width="301" height="171">
+  <defs/>
+  <g id="Canvas_2" fill="none" stroke="none" stroke-opacity="1" fill-opacity="1" stroke-dasharray="none">
+    <title>Canvas 2</title>
+    <g id="Canvas_2_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_10">
+        <g id="Graphic_8">
+          <rect x="-362.5" y="-82.5" width="300" height="170" fill="white"/>
+          <rect x="-362.5" y="-82.5" width="300" height="170" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-357.5 -16.456055)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="83.56" y="15" xml:space="preserve">&lt;&lt;Component&gt;&gt;</tspan>
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="16" fill="black" x="123.216" y="34.448" xml:space="preserve">Order</tspan>
+          </text>
+        </g>
+        <g id="Group_4">
+          <g id="Graphic_7">
+            <rect x="-120" y="-62.5" width="37.5" height="40" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_6">
+            <rect x="-132.5" y="-42.5" width="25" height="7.5" fill="white"/>
+            <rect x="-132.5" y="-42.5" width="25" height="7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+          <g id="Graphic_5">
+            <rect x="-132.5" y="-55" width="25" height="7.5" fill="white"/>
+            <rect x="-132.5" y="-55" width="25" height="7.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

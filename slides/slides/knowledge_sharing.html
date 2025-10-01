@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="knowledge_sharing_files/libs/clipboard/clipboard.min.js"></script>
+<script src="knowledge_sharing_files/libs/quarto-html/tabby.min.js"></script>
+<script src="knowledge_sharing_files/libs/quarto-html/popper.min.js"></script>
+<script src="knowledge_sharing_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="knowledge_sharing_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="knowledge_sharing_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="knowledge_sharing_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <title>Knowledge Sharing</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="knowledge_sharing_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="knowledge_sharing_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="knowledge_sharing_files/libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="_static/styles.css">
+  <link href="knowledge_sharing_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="knowledge_sharing_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="knowledge_sharing_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="knowledge_sharing_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Knowledge Sharing</h1>
+
+<div class="quarto-title-authors">
+</div>
+
+</section>
+<section class="slide level3">
+
+<blockquote>
+<p><em>“Your organization should be able to answer most of its own questions.”</em> – Google SE</p>
+</blockquote>
+</section>
+<section id="why-knowledge-sharing-matters" class="title-slide slide level2 center">
+<h2>Why Knowledge Sharing Matters</h2>
+<ul>
+<li>Organizations must be self-reliant in answering questions.</li>
+<li>Knowledge sharing fosters efficiency, innovation, and scalability.</li>
+<li>Psychological safety is key to a successful learning culture.</li>
+</ul>
+<aside class="notes">
+<p>Knowledge sharing helps organizations avoid redundant effort and accelerates learning. Without it, teams face bottlenecks, inefficiencies, and reliance on a few individuals. Psychological safety enables team members to ask questions without fear, ensuring continuous learning. Knowledge-sharing mechanisms like documentation, mentorship, and collaborative discussions help prevent knowledge loss and create a more resilient organization.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="challenges-to-knowledge-sharing" class="title-slide slide level2 center">
+<h2>Challenges to Knowledge Sharing</h2>
+<ul>
+<li><strong>Psychological Safety:</strong> Fear of speaking up or making mistakes.<br>
+</li>
+<li><strong>Information Islands:</strong> Knowledge is siloed in separate teams.<br>
+</li>
+<li><strong>Single Point of Failure (SPOF):</strong> Over-reliance on specific individuals.<br>
+</li>
+<li><strong>All-or-Nothing Expertise:</strong> Knowledge concentrated among a few experts.<br>
+</li>
+<li><strong>Parroting:</strong> Copying without true understanding.<br>
+</li>
+<li><strong>Haunted Graveyards:</strong> Fear of modifying outdated code or processes.</li>
+</ul>
+<p><strong>Q:</strong> <em>Which of these have you encountered in a team or project?</em></p>
+<aside class="notes">
+<p>Common challenges include knowledge fragmentation, lack of documentation, and a reliance on specific individuals. Psychological safety issues prevent open dialogue, while information islands cause teams to develop in silos without shared knowledge. SPOFs create risks when key individuals leave, while all-or-nothing expertise leaves a skill gap between experts and novices. Parroting leads to inefficient learning, and haunted graveyards discourage improvements due to fear of breaking things.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="the-philosophy-of-knowledge-sharing" class="title-slide slide level2 center">
+<h2>The Philosophy of Knowledge Sharing</h2>
+<ul>
+<li>Software engineering is people-centric.</li>
+<li>Experts and documentation serve different but complementary roles.</li>
+<li>Tribal knowledge vs.&nbsp;documented knowledge.</li>
+</ul>
+<aside class="notes">
+<p>While software development produces code, the real value comes from knowledge shared among teams. Documentation scales knowledge, while experts provide context and interpretation. Tribal knowledge often resides informally among senior engineers, making structured documentation essential for long-term sustainability. By formalizing knowledge through documentation and mentorship, teams can prevent reliance on individual memory and ensure smoother onboarding for new members.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="psychological-safety-as-a-foundation" class="title-slide slide level2 center">
+<h2>Psychological Safety as a Foundation</h2>
+<ul>
+<li>A culture where mistakes and questions are welcomed.</li>
+<li>Mentorship’s role in creating psychological safety.</li>
+</ul>
+<p><strong>Q:</strong> <em>How do you feel about asking ‘basic’ questions in a team setting? Why?</em></p>
+<aside class="notes">
+<p>Psychological safety ensures team members are comfortable admitting gaps in knowledge and seeking help. Without it, individuals may hesitate to ask questions, slowing down learning and innovation. A culture that encourages open discussions, constructive feedback, and mentorship programs helps create an inclusive learning environment where employees feel valued and supported.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="strategies-for-growing-knowledge" class="title-slide slide level2 center">
+<h2>Strategies for Growing Knowledge</h2>
+<ul>
+<li>Always ask questions!</li>
+<li>Understand the context (Chesterton’s Fence principle).</li>
+<li>Seek community-based learning (group chats, mailing lists, Q&amp;A platforms).</li>
+<li>Leaders must model curiosity.</li>
+</ul>
+<aside class="notes">
+<p>Encouraging curiosity and knowledge-sharing behaviors prevents stagnation. Leaders should model continuous learning by asking questions and acknowledging areas where they need help. Chesterton’s Fence principle highlights the importance of understanding the rationale behind past decisions before making changes. Seeking insights from colleagues through group discussions and Q&amp;A forums enhances shared understanding and avoids unnecessary errors.</p>
+<p>Chesterton’s Fence Principle: <em>“Do not remove a fence until you know why it was put there.”</em> Chesterson was a British writer and philosopher.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="teaching-others-scaling-knowledge" class="title-slide slide level2 center">
+<h2>Teaching Others &amp; Scaling Knowledge</h2>
+<ul>
+<li>Office hours</li>
+<li>Tech talks and classes</li>
+<li>Writing and maintaining documentation</li>
+<li>Code reviews as a teaching tool</li>
+</ul>
+<p><strong>Q:</strong> <em>What are the benefits of explaining concepts to others?</em></p>
+<aside class="notes">
+<p>Teaching is a key learning tool. Explaining a concept to others reinforces understanding, surfaces gaps in knowledge, and distributes expertise across a team. Office hours provide a dedicated space for discussions, while tech talks and classes help scale knowledge to a broader audience. Writing documentation ensures longevity, and structured code reviews provide continuous mentorship within development teams.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="code-as-a-knowledge-sharing-tool" class="title-slide slide level2 center">
+<h2>Code as a Knowledge-Sharing Tool</h2>
+<ul>
+<li>Readability and clarity in code.</li>
+<li>Code documentation and inline comments.</li>
+<li>Knowledge transfer through code reviews.</li>
+</ul>
+<aside class="notes">
+<p>Readable, well-commented code is a long-term investment in knowledge sharing. Code comments, when kept updated, provide insights into implementation choices. Inline documentation clarifies intent, helping both current and future engineers understand design decisions. Code reviews reinforce best practices by enabling knowledge transfer between reviewers and authors, helping junior engineers ramp up faster while improving code quality.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="organizational-knowledge-culture" class="title-slide slide level2 center">
+<h2>Organizational Knowledge &amp; Culture</h2>
+<ul>
+<li>Cultivating a knowledge-sharing culture.</li>
+<li>Respect and inclusivity in knowledge-sharing.</li>
+<li>Incentives (peer bonuses, kudos).</li>
+</ul>
+<aside class="notes">
+<p>Organizations should reward knowledge-sharing behaviors to sustain a learning culture. Recognition mechanisms like peer bonuses, kudos, and formal evaluations incentivize knowledge-sharing contributions. Promoting respect and inclusivity ensures all team members feel valued, reducing the risk of information hoarding and reinforcing collaborative knowledge-sharing environments.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="establishing-canonical-information-sources" class="title-slide slide level2 center">
+<h2>Establishing Canonical Information Sources</h2>
+<p>Canonical (authoritative) information sources include:</p>
+<ul>
+<li>Developer guides and best practices.</li>
+<li>Internal tools (go/ links, g3doc).</li>
+<li>Codelabs and static analysis tools.</li>
+</ul>
+<aside class="notes">
+<p>Centralizing knowledge helps teams avoid duplication and ensures consistency. Well-maintained, easily accessible documentation is key.</p>
+<p>Canonical meaning “authoritative” or “standardized” information sources.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="googles-readability-process" class="title-slide slide level2 center">
+<h2>Google’s Readability Process</h2>
+<ul>
+<li>Standardized mentorship through code review.</li>
+<li>Trade-offs (time / bottlenecks).</li>
+<li>Scaling knowledge at a global level.</li>
+</ul>
+<aside class="notes">
+<p>Google’s readability process ensures engineers adhere to coding best practices while learning from experienced reviewers. While this process standardizes code quality across large-scale teams, it also introduces additional review cycles. The structured mentorship built into readability reviews ensures long-term code maintainability, allowing engineers to internalize company-wide best practices and contribute more effectively. Trade-offs include the time spent in reviews and the potential for bottlenecks.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section id="key-takeaways" class="title-slide slide level2 center">
+<h2>Key Takeaways</h2>
+<ul>
+<li>Psychological safety is essential.</li>
+<li>Effective knowledge-sharing involves multiple strategies.</li>
+<li>Organizations must invest in both human expertise and documentation.</li>
+</ul>
+<aside class="notes">
+<p>A strong knowledge-sharing culture is an investment in long-term success. Encouraging employees to document findings, contribute to discussions, and mentor others builds a sustainable system of knowledge exchange. As organizations grow, continuously evolving knowledge-sharing strategies help adapt to new challenges, ensuring a resilient and informed workforce.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="knowledge_sharing_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="knowledge_sharing_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

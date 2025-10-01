@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="57 250 906 223" width="906" height="223">
+  <defs/>
+  <g id="Canvas_4" fill="none" stroke="none" stroke-opacity="1" fill-opacity="1" stroke-dasharray="none">
+    <title>Canvas 4</title>
+    <g id="Canvas_4_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_2">
+        <g id="Graphic_4">
+          <rect x="390" y="252" width="81.93651" height="26.18765" fill="white"/>
+          <rect x="390" y="252" width="81.93651" height="26.18765" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_3">
+          <rect x="390" y="274.52138" width="279.7143" height="197.97862" fill="white"/>
+          <rect x="390" y="274.52138" width="279.7143" height="197.97862" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(395 366.5107)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="111.50754" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_6">
+        <g id="Graphic_8">
+          <rect x="410" y="292.5" width="70.30303" height="26.666667" fill="white"/>
+          <rect x="410" y="292.5" width="70.30303" height="26.666667" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_7">
+          <rect x="410" y="317.64286" width="240" height="134.85714" fill="white"/>
+          <rect x="410" y="317.64286" width="240" height="134.85714" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(415 378.07143)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="91.65039" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_9">
+        <g id="Graphic_11">
+          <rect x="430" y="335" width="58.58586" height="25" fill="white"/>
+          <rect x="430" y="335" width="58.58586" height="25" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_10">
+          <rect x="430" y="359.64286" width="200" height="72.85714" fill="white"/>
+          <rect x="430" y="359.64286" width="200" height="72.85714" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(435 389.07143)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="71.65039" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_12">
+        <rect x="502.5" y="387.5" width="57.5" height="17.5" fill="white"/>
+      </g>
+      <g id="Graphic_13">
+        <text transform="translate(512.5 277.5)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="0" y="13" xml:space="preserve">java</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <text transform="translate(512.5 320)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="0" y="13" xml:space="preserve">util</tspan>
+        </text>
+      </g>
+      <g id="Graphic_15">
+        <text transform="translate(512.5 362.5)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="0" y="13" xml:space="preserve">Date</tspan>
+        </text>
+      </g>
+      <g id="Group_27">
+        <g id="Graphic_29">
+          <rect x="57.5" y="252" width="81.93651" height="26.18765" fill="white"/>
+          <rect x="57.5" y="252" width="81.93651" height="26.18765" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_28">
+          <rect x="57.5" y="274.52138" width="279.7143" height="197.97862" fill="white"/>
+          <rect x="57.5" y="274.52138" width="279.7143" height="197.97862" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(62.5 366.5107)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="111.50754" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_24">
+        <g id="Graphic_26">
+          <rect x="77.5" y="292.5" width="70.30303" height="26.666667" fill="white"/>
+          <rect x="77.5" y="292.5" width="70.30303" height="26.666667" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_25">
+          <rect x="77.5" y="317.64286" width="240" height="134.85714" fill="white"/>
+          <rect x="77.5" y="317.64286" width="240" height="134.85714" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(82.5 378.07143)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="91.65039" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_21">
+        <g id="Graphic_23">
+          <rect x="97.5" y="335" width="58.58586" height="25" fill="white"/>
+          <rect x="97.5" y="335" width="58.58586" height="25" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_22">
+          <rect x="97.5" y="359.64286" width="200" height="72.85714" fill="white"/>
+          <rect x="97.5" y="359.64286" width="200" height="72.85714" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(102.5 389.07143)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="71.65039" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_20">
+        <rect x="170" y="387.5" width="57.5" height="17.5" fill="white"/>
+      </g>
+      <g id="Graphic_19">
+        <text transform="translate(62.5 255)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="19.447266" y="13" xml:space="preserve">java</tspan>
+        </text>
+      </g>
+      <g id="Graphic_18">
+        <text transform="translate(82.5 297.5)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="13.197266" y="13" xml:space="preserve">util</tspan>
+        </text>
+      </g>
+      <g id="Graphic_17">
+        <text transform="translate(102.5 340)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="6.947266" y="13" xml:space="preserve">Date</tspan>
+        </text>
+      </g>
+      <g id="Group_32">
+        <g id="Graphic_34">
+          <rect x="722.5" y="312.5" width="70.30303" height="26.666667" fill="white"/>
+          <rect x="722.5" y="312.5" width="70.30303" height="26.666667" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        </g>
+        <g id="Graphic_33">
+          <rect x="722.5" y="337.64286" width="240" height="134.85714" fill="white"/>
+          <rect x="722.5" y="337.64286" width="240" height="134.85714" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(727.5 398.07143)" fill="black">
+            <tspan font-family="Helvetica" font-size="12" fill="black" x="91.65039" y="11" xml:space="preserve">Package</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Graphic_31">
+        <text transform="translate(725 340)" fill="black">
+          <tspan font-family="Andale Mono" font-size="14" fill="black" x="47.78906" y="13" xml:space="preserve">java::util::Date</tspan>
+        </text>
+      </g>
+      <g id="Graphic_35">
+        <rect x="812.5" y="397.5" width="57.5" height="17.5" fill="white"/>
+      </g>
+    </g>
+  </g>
+</svg>

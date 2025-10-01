@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-280.5 979.5 301 541" width="301" height="541">
+  <defs/>
+  <g id="Canvas_2" fill="none" stroke="none" stroke-opacity="1" fill-opacity="1" stroke-dasharray="none">
+    <title>Canvas 2</title>
+    <g id="Canvas_2_Layer_1">
+      <title>Layer 1</title>
+      <g id="Group_112">
+        <g id="Graphic_117">
+          <rect x="-280" y="980" width="300" height="170" fill="white"/>
+          <rect x="-280" y="980" width="300" height="170" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-275 1046.044)" fill="#d6d6d6">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="#d6d6d6" x="83.56" y="15" xml:space="preserve">&lt;&lt;Component&gt;&gt;</tspan>
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="16" fill="#d6d6d6" x="123.216" y="34.448" xml:space="preserve">Order</tspan>
+          </text>
+        </g>
+        <g id="Group_113">
+          <g id="Graphic_116">
+            <rect x="-37.5" y="1e3" width="37.5" height="40" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_115">
+            <rect x="-50" y="1020" width="25" height="7.5" fill="white"/>
+            <rect x="-50" y="1020" width="25" height="7.5" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+          <g id="Graphic_114">
+            <rect x="-50" y="1007.5" width="25" height="7.5" fill="white"/>
+            <rect x="-50" y="1007.5" width="25" height="7.5" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_106">
+        <g id="Graphic_111">
+          <rect x="-280" y="1350" width="300" height="170" fill="white"/>
+          <rect x="-280" y="1350" width="300" height="170" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(-275 1416.044)" fill="#c1c1c1">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="#c1c1c1" x="83.56" y="15" xml:space="preserve">&lt;&lt;Component&gt;&gt;</tspan>
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="16" fill="#c1c1c1" x="114.768" y="34.448" xml:space="preserve">Product</tspan>
+          </text>
+        </g>
+        <g id="Group_107">
+          <g id="Graphic_110">
+            <rect x="-37.5" y="1370" width="37.5" height="40" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          </g>
+          <g id="Graphic_109">
+            <rect x="-50" y="1390" width="25" height="7.5" fill="white"/>
+            <rect x="-50" y="1390" width="25" height="7.5" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+          <g id="Graphic_108">
+            <rect x="-50" y="1377.5" width="25" height="7.5" fill="white"/>
+            <rect x="-50" y="1377.5" width="25" height="7.5" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Graphic_105">
+        <circle cx="-130" cy="1247.5" r="10.0000159790189" stroke="#0432ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <g id="Line_104">
+        <line x1="-130" y1="1237.5" x2="-130" y2="1175" stroke="#0432ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <g id="Group_101">
+        <g id="Group_102">
+          <g id="Graphic_103">
+            <path d="M -115 1247.5 C -115 1255.7787 -121.721 1262.5 -130 1262.5 C -138.2787 1262.5 -145 1255.7787 -145 1247.5" stroke="#0432ff" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Line_100">
+        <line x1="-130" y1="1325" x2="-130" y2="1261.75" stroke="#0432ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <g id="Graphic_119">
+        <rect x="-142.5" y="1325" width="25" height="25" fill="white"/>
+        <rect x="-142.5" y="1325" width="25" height="25" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_121">
+        <rect x="-142.5" y="1150" width="25" height="25" fill="white"/>
+        <rect x="-142.5" y="1150" width="25" height="25" stroke="#c1c1c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

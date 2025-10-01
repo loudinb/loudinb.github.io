@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Checkpoint 3: Project Contribution &amp; Reflection &#8212; Software Engineering (EECE3093C / CS3093C)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3afe5843" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'project/checkpoint3';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FAQs" href="../faqs.html" />
+    <link rel="prev" title="Checkpoint 2: Software Development Life Cycle (SDLC) Analysis" href="checkpoint2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../syllabus/20EECE3093C.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/uc_logo.svg" class="logo__image only-light" alt="Software Engineering (EECE3093C / CS3093C) - Home"/>
+    <script>document.write(`<img src="../_static/uc_logo.svg" class="logo__image only-dark" alt="Software Engineering (EECE3093C / CS3093C) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../syllabus/20EECE3093C.html">
+                    Software Engineering
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Syllabus</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/25ss/25ss.html">Spring Semester 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/instructor-information.html">Instructor Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/assessment-plan-and-policies.html">Assessment Plan and Policies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/grading-policy.html">Grading Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus/university-policies.html">University Policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exam Knowledge Checks</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exams/exam1.html">Exam 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/history_of_software_engineering.html">History of Software Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/how_to_work_well_on_teams.html">How to Work Well on Teams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_crisis.html">Software Crisis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_engineering_as_a_layered_technology.html">Software Engineering as a Layered Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_engineering_as_a_layered_technology_2.html">Software Engineering as a Layered Technology (Part 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/software_engineering_code.html">Software Engineering Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/the_1968_69_nato_software_engineering_reports.html">The 1968/69 NATO Software Engineering Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/the_mythical_man_month.html">The Mythical Man-Month</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/what_is_software_engineering.html">What is Software Engineering?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam1/what_is_software_engineering_2.html">What is Software Engineering? (Part 2)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../exams/exam2.html">Exam 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/containerization_vs_virtualization.html">Containerization vs Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/demystifying_containers_part_I_kernel_space.html">Demystifying Containers - Part I: Kernel Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/docker_getting_started.html">Docker - Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/github_codespaces_overview.html">GitHub Codespaces Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/knowledge_sharing.html">Knowledge Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exams/exam2/leading_at_scale.html">Leading at Scale</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab Assignments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab1.html">Lab 1: Version Control Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab2.html">Lab 2: Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab3.html">Lab 3: Emphasizing Software Quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs/lab4.html">Lab 4: UML, GitHub Project and Issues</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Project</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checkpoint1.html">Checkpoint 1: Project Selection (25% of Project Grade)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checkpoint2.html">Checkpoint 2: Software Development Life Cycle (SDLC) Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Checkpoint 3: Project Contribution &amp; Reflection</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faqs.html">FAQs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faqs/github_student_benefits.html">GitHub Student Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faqs/oreilly_access.html">How do I access O’Reilly books?</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../external-links.html">External Links</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference external" href="https://github.com">GitHub</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Odds and End</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../disclaimer.html">Disclaimer</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/project/checkpoint3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Checkpoint 3: Project Contribution & Reflection</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-contribution-phase">Project Contribution Phase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">Important Notes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-rubric">Grading Rubric</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <style>
+/* DRAFT watermark with criss-cross pattern */
+.draft-watermark {
+  position: relative;
+}
+
+.draft-watermark::before,
+.draft-watermark::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      rgba(255, 0, 0, 0.07) 0px, 
+      rgba(255, 0, 0, 0.07) 2px, 
+      transparent 2px, 
+      transparent 150px
+    ),
+    repeating-linear-gradient(-45deg, 
+      rgba(255, 0, 0, 0.07) 0px, 
+      rgba(255, 0, 0, 0.07) 2px, 
+      transparent 2px, 
+      transparent 150px
+    );
+  background-size: 250px 250px, 250px 250px;
+  background-position: 0 0, 0 0;
+}
+
+.draft-watermark::before {
+  content: "";
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      transparent 0px, 
+      transparent 75px, 
+      rgba(255, 0, 0, 0) 75px, 
+      rgba(255, 0, 0, 0) 76px
+    ),
+    repeating-linear-gradient(-45deg, 
+      transparent 0px, 
+      transparent 75px, 
+      rgba(255, 0, 0, 0) 75px, 
+      rgba(255, 0, 0, 0) 76px
+    );
+}
+
+/* Add DRAFT text at intersection points */
+.draft-watermark::after {
+  background: none;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      transparent 0px, 
+      transparent 125px, 
+      rgba(255, 0, 0, 0.1) 125px, 
+      rgba(255, 0, 0, 0.1) 126px
+    ),
+    repeating-linear-gradient(-45deg, 
+      transparent 0px, 
+      transparent 125px, 
+      rgba(255, 0, 0, 0.1) 125px, 
+      rgba(255, 0, 0, 0.1) 126px
+    );
+}
+
+body {
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10000;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      transparent, 
+      transparent 120px, 
+      rgba(255, 0, 0, 0) 120px, 
+      rgba(255, 0, 0, 0) 250px
+    ),
+    repeating-linear-gradient(-45deg, 
+      transparent, 
+      transparent 120px, 
+      rgba(255, 0, 0, 0) 120px, 
+      rgba(255, 0, 0, 0) 250px
+    );
+}
+
+.draft-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10001;
+}
+
+.draft-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      transparent, 
+      transparent 123px, 
+      rgba(255, 0, 0, 0.1) 123px, 
+      rgba(255, 0, 0, 0.1) 124px
+    ),
+    repeating-linear-gradient(-45deg, 
+      transparent, 
+      transparent 123px, 
+      rgba(255, 0, 0, 0.1) 123px, 
+      rgba(255, 0, 0, 0.1) 124px
+    );
+}
+
+/* Add actual DRAFT text at intersection points */
+.draft-text span {
+  position: absolute;
+  color: rgba(255, 0, 0, 0.1);
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 20px;
+  transform: rotate(-45deg);
+  white-space: nowrap;
+}
+
+/* Ensure watermark appears in print as well */
+@media print {
+  .draft-watermark::before,
+  .draft-watermark::after,
+  .draft-text,
+  .draft-text::after,
+  .draft-text span {
+    position: fixed;
+  }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('draft-watermark');
+  
+  // Create a div for DRAFT text elements
+  var draftTextDiv = document.createElement('div');
+  draftTextDiv.className = 'draft-text';
+  document.body.appendChild(draftTextDiv);
+  
+  // Create a grid of DRAFT texts
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  
+  // Place DRAFT text at grid intervals
+  for (var y = 0; y < windowHeight; y += 250) {
+    for (var x = 0; x < windowWidth; x += 250) {
+      var draftSpan = document.createElement('span');
+      draftSpan.textContent = 'DRAFT';
+      draftSpan.style.left = x + 'px';
+      draftSpan.style.top = y + 'px';
+      draftTextDiv.appendChild(draftSpan);
+    }
+  }
+});
+</script>
+<section class="tex2jax_ignore mathjax_ignore" id="checkpoint-3-project-contribution-reflection">
+<h1>Checkpoint 3: Project Contribution &amp; Reflection<a class="headerlink" href="#checkpoint-3-project-contribution-reflection" title="Link to this heading">#</a></h1>
+<p><strong>(40% of Project Grade)</strong></p>
+<p>You’ve selected a robust open-source project and analyzed its development lifecycle. Now, it’s time to put your understanding into practice and contribute to the project directly.</p>
+<p>This final checkpoint is focused on <strong>active participation</strong> in your chosen open-source project. You will be forking the project repository, identifying and addressing real issues, implementing your solution, and submitting a pull request to contribute your changes back to the project. This experience will provide invaluable hands-on learning about collaborative software development in an open-source environment and solidify your understanding of software engineering principles in a practical context.</p>
+<section id="project-contribution-phase">
+<h2>Project Contribution Phase<a class="headerlink" href="#project-contribution-phase" title="Link to this heading">#</a></h2>
+<p>While the following outlines a standard open source contribution workflow, <strong>it’s important to note that each project may have its own specific processes and guidelines</strong>. As a good contributor, you should carefully read and follow your chosen project’s contribution documentation, even when it deviates from these standard practices. Document any project-specific processes you encounter as part of your submission.</p>
+<p>This phase typically involves the following key steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Fork the Repository:</strong> Create your own fork of the main project repository on GitHub. This will be your personal workspace to develop your contributions.</p></li>
+<li><p><strong>Issue Identification and Selection:</strong></p>
+<ul class="simple">
+<li><p><strong>Explore the Issue Tracker:</strong> Navigate to the “Issues” section of your chosen project’s GitHub repository.</p></li>
+<li><p><strong>Identify “Good First Issues” or “Help Wanted” Issues:</strong> Look for issues tagged as “good first issue,” “help wanted,” or similar labels. These are often issues that are well-defined and suitable for new contributors.</p></li>
+<li><p><strong>Understand Issue Scope:</strong> Carefully read the issue descriptions to understand the problem, the expected solution, and any relevant context. Consider the complexity and scope of the issue in relation to the remaining time in the project (4-5 weeks).</p></li>
+<li><p><strong>Communicate and Claim an Issue:</strong> Comment on the issue to express your interest in working on it and ask any clarifying questions to the project maintainers. This shows initiative and helps avoid duplicated effort. Some projects have a specific process for “claiming” issues to prevent conflicts.</p></li>
+</ul>
+</li>
+<li><p><strong>Development and Implementation:</strong></p>
+<ul class="simple">
+<li><p><strong>Set up your Development Environment:</strong> Follow the project’s documentation to set up your local development environment. This usually involves cloning your forked repository, installing necessary dependencies, and configuring your tools.</p></li>
+<li><p><strong>Create a Branch:</strong> Create a new branch in your forked repository for your issue. This isolates your changes and keeps your main branch clean. Use a descriptive branch name related to the issue you are addressing (e.g., <code class="docutils literal notranslate"><span class="pre">fix-typo-in-docs</span></code>, <code class="docutils literal notranslate"><span class="pre">implement-feature-x</span></code>).</p></li>
+<li><p><strong>Implement the Solution:</strong> Write code, modify documentation, or perform other necessary tasks to address the issue you selected. Adhere to the project’s coding standards, style guides, and any contribution guidelines you identified in Checkpoint 2.</p></li>
+<li><p><strong>Test Your Changes:</strong> Thoroughly test your solution to ensure it correctly addresses the issue and doesn’t introduce new problems. Run existing tests and write new tests if necessary, as per the project’s testing practices.</p></li>
+</ul>
+</li>
+<li><p><strong>Pull Request Submission:</strong></p>
+<ul class="simple">
+<li><p><strong>Commit Your Changes:</strong> Commit your changes to your branch with clear and descriptive commit messages. Follow the project’s commit message conventions if specified.</p></li>
+<li><p><strong>Push to Your Fork:</strong> Push your branch to your forked repository on GitHub.</p></li>
+<li><p><strong>Create a Pull Request (PR):</strong> Navigate to your forked repository on GitHub and create a new pull request. The PR should target the main project’s base branch (usually <code class="docutils literal notranslate"><span class="pre">main</span></code> or <code class="docutils literal notranslate"><span class="pre">develop</span></code>).</p></li>
+<li><p><strong>Write a Clear PR Description:</strong> In your PR description, clearly explain:</p>
+<ul>
+<li><p>What issue your PR addresses (link to the issue).</p></li>
+<li><p>What changes you have made and why.</p></li>
+<li><p>Any relevant details about your implementation or testing.</p></li>
+<li><p>Reference any discussions or communication you had with maintainers.</p></li>
+</ul>
+</li>
+<li><p><strong>Review and Respond to Feedback:</strong> Project maintainers will review your pull request. Be prepared to respond to their feedback, answer questions, and make revisions to your code as requested. This is a crucial part of the open-source contribution process. Be patient and respectful during the review process.</p></li>
+</ul>
+</li>
+<li><p><strong>Iteration and Merge:</strong></p>
+<ul class="simple">
+<li><p><strong>Address Feedback:</strong> Revise your code based on the feedback from maintainers. Update your branch and push the changes to your fork; the pull request will automatically update.</p></li>
+<li><p><strong>Merge (Potentially):</strong> If your pull request is accepted and approved by the maintainers, it will be merged into the main project repository! Even if your PR is not merged within the timeframe of this checkpoint, the experience of contributing and receiving feedback is valuable and will be fully credited in your assessment.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="deliverables">
+<h2>Deliverables<a class="headerlink" href="#deliverables" title="Link to this heading">#</a></h2>
+<p>For this final checkpoint, you will submit a comprehensive document (PDF or Markdown) that includes the following:</p>
+<ol class="arabic simple">
+<li><p><strong>Contribution Summary (2-3 paragraphs):</strong></p>
+<ul class="simple">
+<li><p><strong>Pull Request Link:</strong> Provide a direct link to the pull request you submitted to the project’s main repository.</p></li>
+<li><p><strong>Issue Link:</strong> Provide a direct link to the issue your contribution addresses.</p></li>
+<li><p><strong>Contribution Description:</strong> Briefly explain the specific contribution you made (e.g., bug fix, new feature, documentation improvement).</p></li>
+<li><p><strong>Rationale:</strong> Explain why you selected this particular issue to address (e.g., impact, learning opportunity, alignment with your skills).</p></li>
+</ul>
+</li>
+<li><p><strong>Project-Specific Contribution Process (1-2 paragraphs):</strong></p>
+<ul class="simple">
+<li><p><strong>Documentation Review:</strong> Describe the project’s contribution guidelines and how they may differ from standard practices.</p></li>
+<li><p><strong>Project-Specific Requirements:</strong> Detail any unique processes, tools, or conventions required by the project (e.g., specific code formatters, testing frameworks, commit message formats).</p></li>
+<li><p><strong>Communication Channels:</strong> Identify the preferred communication channels used by the project (e.g., Discord, mailing lists, GitHub Discussions).</p></li>
+</ul>
+</li>
+<li><p><strong>Development Process Analysis (2-3 paragraphs):</strong></p>
+<ul class="simple">
+<li><p><strong>Technical Approach:</strong> Describe the approach you took to solve the issue, including:</p>
+<ul>
+<li><p>Key technical decisions made during implementation</p></li>
+<li><p>Tools and technologies you used</p></li>
+<li><p>How you tested your solution</p></li>
+</ul>
+</li>
+<li><p><strong>Challenges Encountered:</strong> Discuss any significant challenges you faced during development and how you overcame them.</p></li>
+<li><p><strong>Community Interactions:</strong> Summarize any communication you had with project maintainers or community members.</p></li>
+</ul>
+</li>
+<li><p><strong>SDLC in Practice (2-3 paragraphs):</strong></p>
+<ul class="simple">
+<li><p><strong>SDLC Alignment:</strong> Reflect on how your practical contribution experience aligned with the SDLC model you inferred in Checkpoint 2.</p></li>
+<li><p><strong>Observable Practices:</strong> Discuss which specific SDLC practices you observed in action during your contribution (e.g., code reviews, testing requirements, release management).</p></li>
+<li><p><strong>Impact Analysis:</strong> Analyze how the project’s SDLC affected your contribution experience, both positively and negatively.</p></li>
+</ul>
+</li>
+<li><p><strong>Learning and Skills Development (1-2 paragraphs):</strong></p>
+<ul class="simple">
+<li><p><strong>Technical Skills:</strong> Identify specific technical skills you gained or improved through this contribution.</p></li>
+<li><p><strong>Collaboration Skills:</strong> Discuss what you learned about collaborative software engineering in an open-source context.</p></li>
+<li><p><strong>Process Knowledge:</strong> Reflect on your improved understanding of software development workflows.</p></li>
+</ul>
+</li>
+<li><p><strong>Future Contributions (1 paragraph):</strong></p>
+<ul class="simple">
+<li><p><strong>Next Steps:</strong> Identify potential future contributions you could make to this project.</p></li>
+<li><p><strong>Growth Areas:</strong> Highlight areas where you could further develop your skills to become a more effective contributor.</p></li>
+<li><p><strong>Open Source Engagement:</strong> Discuss how this experience has shaped your perspective on contributing to open-source projects in the future.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="important-notes">
+<h2>Important Notes:<a class="headerlink" href="#important-notes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Project-Specific Guidelines:</strong> Each open-source project has its own unique contribution workflow and guidelines. Your ability to adapt to and follow these project-specific requirements is a key part of this assessment.</p></li>
+<li><p><strong>Focus on the Process:</strong> The primary goal of this checkpoint is the <em>process</em> of contributing to open source, not necessarily whether your pull request gets merged within the project timeframe. Effort, engagement, and learning are key to your assessment.</p></li>
+<li><p><strong>Communication is Key:</strong> Don’t hesitate to ask questions and engage with the project community. Open-source projects thrive on collaboration, and most maintainers are happy to assist new contributors.</p></li>
+<li><p><strong>Start Early:</strong> Open-source contribution takes time, especially with code reviews and feedback cycles. Start exploring issues and working on your contribution immediately to allow sufficient time for the review process.</p></li>
+<li><p><strong>Document as You Go:</strong> Keep notes throughout your contribution process - including screenshots of interesting interactions, links to relevant discussions, and reflections on challenges and solutions. These will be invaluable when preparing your final submission.</p></li>
+<li><p><strong>Be Persistent:</strong> If your first issue attempt proves too challenging or gets claimed by someone else, don’t be discouraged. Finding the right issue may take several attempts, especially in popular projects.</p></li>
+<li><p><strong>Quality Over Quantity:</strong> A small, well-crafted contribution that demonstrates understanding of software engineering principles is more valuable than a large but poorly implemented one.</p></li>
+</ul>
+</section>
+<section id="grading-rubric">
+<h2>Grading Rubric<a class="headerlink" href="#grading-rubric" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Criteria</p></th>
+<th class="head text-left"><p>Excellent (Points Range)</p></th>
+<th class="head text-left"><p>Good (Point Range)</p></th>
+<th class="head text-left"><p>Fair (Point Range)</p></th>
+<th class="head text-left"><p>Needs Improvement (Point Range)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>1. Pull Request Submission &amp; Meaningful Contribution (35 points)</strong></p></td>
+<td class="text-left"><p><strong>31-35 pts:</strong> PR submitted to main repository. Contribution is meaningful, addresses a real issue, and demonstrates effort and understanding of the project. Code/documentation follows project conventions perfectly.</p></td>
+<td class="text-left"><p><strong>26-30 pts:</strong> PR submitted. Contribution is relevant and shows effort, but might be less impactful. Code/documentation generally follows project conventions.</p></td>
+<td class="text-left"><p><strong>21-25 pts:</strong> PR submitted, but contribution is minor or shows some misunderstanding of project conventions. Some issues with code quality or documentation.</p></td>
+<td class="text-left"><p><strong>0-20 pts:</strong> PR not submitted or contribution is not a genuine attempt to address a project issue. Significant issues with code quality or documentation.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>2. Development Process Summary (20 points)</strong></p></td>
+<td class="text-left"><p><strong>18-20 pts:</strong> Comprehensive and well-articulated summary of the development process, highlighting challenges, solutions, and tools used. Demonstrates clear reflection and specific technical details.</p></td>
+<td class="text-left"><p><strong>15-17 pts:</strong> Good summary that describes the process and challenges, but could be more detailed or reflective. Some specific examples provided.</p></td>
+<td class="text-left"><p><strong>12-14 pts:</strong> Basic summary that outlines the process but lacks depth, specific technical details, or reflection on challenges and solutions.</p></td>
+<td class="text-left"><p><strong>0-11 pts:</strong> Summary is missing or very superficial and uninformative. Few or no specific technical details provided.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>3. Reflection on SDLC in Practice (20 points)</strong></p></td>
+<td class="text-left"><p><strong>18-20 pts:</strong> Insightful and well-reasoned reflection on the SDLC in practice, effectively linking practical experience to the SDLC analysis from Checkpoint 2. Identifies multiple specific SDLC practices observed.</p></td>
+<td class="text-left"><p><strong>15-17 pts:</strong> Good reflection that connects experience to SDLC, but could be more insightful or detailed. Identifies several SDLC practices with adequate analysis.</p></td>
+<td class="text-left"><p><strong>12-14 pts:</strong> Basic reflection with limited connections to SDLC analysis. Few SDLC practices identified with minimal analysis.</p></td>
+<td class="text-left"><p><strong>0-11 pts:</strong> Reflection is missing or shows no understanding of SDLC in practice. Fails to make connections between experience and theory.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>4. Learning and Future Contributions (15 points)</strong></p></td>
+<td class="text-left"><p><strong>13-15 pts:</strong> Clear and insightful summary of learning outcomes and future contribution potential. Articulates specific technical and collaborative skills gained. Shows genuine reflection on personal growth.</p></td>
+<td class="text-left"><p><strong>10-12 pts:</strong> Good summary of learning outcomes with some specific skills identified. Shows awareness of personal growth and potential future contributions.</p></td>
+<td class="text-left"><p><strong>7-9 pts:</strong> Basic summary that mentions skills gained but lacks specificity or depth in analyzing personal development. Limited discussion of future contributions.</p></td>
+<td class="text-left"><p><strong>0-6 pts:</strong> Summary is missing or inadequate. Few or no specific skills identified. Little evidence of reflection on personal growth.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>5. Clarity &amp; Presentation (10 points)</strong></p></td>
+<td class="text-left"><p><strong>9-10 pts:</strong> Exceptionally clear, concise, and well-organized writing. Professional tone. Document is well-formatted and easy to read. Error-free.</p></td>
+<td class="text-left"><p><strong>7-8 pts:</strong> Clear and well-organized writing with minor errors. Good formatting that enhances readability. Professional tone throughout.</p></td>
+<td class="text-left"><p><strong>5-6 pts:</strong> Writing is understandable but may lack clarity, organization, or professionalism in tone. Formatting may be inconsistent.</p></td>
+<td class="text-left"><p><strong>0-4 pts:</strong> Writing is unclear, poorly organized, and difficult to understand. Formatting is poor and detracts from content.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Total (100 points)</strong></p></td>
+<td class="text-left"><p><strong>90-100 pts:</strong> Excellent</p></td>
+<td class="text-left"><p><strong>75-89 pts:</strong> Good</p></td>
+<td class="text-left"><p><strong>60-74 pts:</strong> Fair</p></td>
+<td class="text-left"><p><strong>0-59 pts:</strong> Needs Improvement</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="checkpoint2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Checkpoint 2: Software Development Life Cycle (SDLC) Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../faqs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">FAQs</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-contribution-phase">Project Contribution Phase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">Important Notes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-rubric">Grading Rubric</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Brian Loudin
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

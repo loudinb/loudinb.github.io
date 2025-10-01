@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="20 45 890.5 545" width="890.5" height="545">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="SharpArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-4 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 5 0 L -3 -3 L 0 0 L 0 0 L -3 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="SharpArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-5 -5 12 10" markerWidth="12" markerHeight="10" color="black">
+      <g>
+        <path d="M 5.05 0 L -3.03 -3.03 L 0 0 L 0 0 L -3.03 3.03 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Canvas_1" fill-opacity="1" stroke-dasharray="none" stroke-opacity="1" fill="none" stroke="none">
+    <title>Canvas 1</title>
+    <rect fill="white" x="20" y="45" width="890.5" height="545"/>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_3">
+        <path d="M 360 45 L 540 45 C 542.7614 45 545 47.238576 545 50 L 545 95 C 545 97.76142 542.7614 100 540 100 L 360 100 C 357.23858 100 355 97.76142 355 95 L 355 50 C 355 47.238576 357.23858 45 360 45 Z" fill="#f4b400"/>
+        <text transform="translate(360 63.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="21.536" y="15" xml:space="preserve">UML Diagram Type</tspan>
+        </text>
+      </g>
+      <g id="Graphic_8">
+        <path d="M 130 150 L 315 150 C 317.76142 150 320 152.23858 320 155 L 320 195 C 320 197.76142 317.76142 200 315 200 L 130 200 C 127.23858 200 125 197.76142 125 195 L 125 155 C 125 152.23858 127.23858 150 130 150 Z" fill="#22b8cf"/>
+        <text transform="translate(130 165.776)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="21.38" y="15" xml:space="preserve">Structural Diagrams</tspan>
+        </text>
+      </g>
+      <g id="Graphic_48">
+        <path d="M 585 150 L 770 150 C 772.7614 150 775 152.23858 775 155 L 775 195 C 775 197.76142 772.7614 200 770 200 L 585 200 C 582.2386 200 580 197.76142 580 195 L 580 155 C 580 152.23858 582.2386 150 585 150 Z" fill="#2c5771"/>
+        <text transform="translate(585 165.776)" fill="white">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="18.572" y="15" xml:space="preserve">Behavioral Diagrams</tspan>
+        </text>
+      </g>
+      <g id="Line_50">
+        <path d="M 450 100 L 450 125 L 222.5 125 L 222.5 143.1" marker-end="url(#SharpArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_51">
+        <path d="M 450 100 L 450 125 L 677.5 125 L 677.5 143.1" marker-end="url(#SharpArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Group_65">
+        <g id="Graphic_59">
+          <path d="M 25 250 L 420 250 C 422.7614 250 425 252.23858 425 255 L 425 455 C 425 457.7614 422.7614 460 420 460 L 25 460 C 22.238576 460 20 457.7614 20 455 L 20 255 C 20 252.23858 22.238576 250 25 250 Z" fill="#dadada"/>
+        </g>
+        <g id="Group_63">
+          <g id="Graphic_54">
+            <path d="M 40 265 L 210 265 C 212.76142 265 215 267.23858 215 270 L 215 310 C 215 312.76142 212.76142 315 210 315 L 40 315 C 37.238576 315 35 312.76142 35 310 L 35 270 C 35 267.23858 37.238576 265 40 265 Z" fill="#22b8cf"/>
+            <text transform="translate(40 271.552)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="10.76" y="15" xml:space="preserve">Composite Structure </tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="54.92" y="33.448" xml:space="preserve">Diagram</tspan>
+            </text>
+          </g>
+          <g id="Graphic_55">
+            <path d="M 235 265 L 405 265 C 407.7614 265 410 267.23858 410 270 L 410 310 C 410 312.76142 407.7614 315 405 315 L 235 315 C 232.23858 315 230 312.76142 230 310 L 230 270 C 230 267.23858 232.23858 265 235 265 Z" fill="#22b8cf"/>
+            <text transform="translate(235 280.776)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="9.568" y="15" xml:space="preserve">Deployment Diagram</tspan>
+            </text>
+          </g>
+          <g id="Graphic_56">
+            <path d="M 40 330 L 145 330 C 147.76142 330 150 332.23858 150 335 L 150 375 C 150 377.76142 147.76142 380 145 380 L 40 380 C 37.238576 380 35 377.76142 35 375 L 35 335 C 35 332.23858 37.238576 330 40 330 Z" fill="#22b8cf"/>
+            <text transform="translate(40 336.552)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="21.388" y="15" xml:space="preserve">Package </tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="22.42" y="33.448" xml:space="preserve">Diagram</tspan>
+            </text>
+          </g>
+          <g id="Graphic_57">
+            <path d="M 170 330 L 275 330 C 277.76142 330 280 332.23858 280 335 L 280 375 C 280 377.76142 277.76142 380 275 380 L 170 380 C 167.23858 380 165 377.76142 165 375 L 165 335 C 165 332.23858 167.23858 330 170 330 Z" fill="#22b8cf"/>
+            <text transform="translate(170 336.552)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="29.988" y="15" xml:space="preserve">Profile</tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="22.42" y="33.448" xml:space="preserve">Diagram</tspan>
+            </text>
+          </g>
+          <g id="Graphic_58">
+            <path d="M 300 330 L 405 330 C 407.7614 330 410 332.23858 410 335 L 410 375 C 410 377.76142 407.7614 380 405 380 L 300 380 C 297.23858 380 295 377.76142 295 375 L 295 335 C 295 332.23858 297.23858 330 300 330 Z" fill="#22b8cf"/>
+            <text transform="translate(300 336.552)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="32.652" y="15" xml:space="preserve">Class</tspan>
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="22.42" y="33.448" xml:space="preserve">Diagram</tspan>
+            </text>
+          </g>
+          <g id="Graphic_60">
+            <path d="M 40 395 L 210 395 C 212.76142 395 215 397.23858 215 400 L 215 440 C 215 442.7614 212.76142 445 210 445 L 40 445 C 37.238576 445 35 442.7614 35 440 L 35 400 C 35 397.23858 37.238576 395 40 395 Z" fill="#22b8cf"/>
+            <text transform="translate(40 410.776)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="28.984" y="15" xml:space="preserve">Object Diagram</tspan>
+            </text>
+          </g>
+          <g id="Graphic_61">
+            <path d="M 235 395 L 405 395 C 407.7614 395 410 397.23858 410 400 L 410 440 C 410 442.7614 407.7614 445 405 445 L 235 445 C 232.23858 445 230 442.7614 230 440 L 230 400 C 230 397.23858 232.23858 395 235 395 Z" fill="#22b8cf"/>
+            <text transform="translate(235 410.776)" fill="white">
+              <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="10.456" y="15" xml:space="preserve">Component Diagram</tspan>
+            </text>
+          </g>
+        </g>
+      </g>
+      <g id="Group_76">
+        <g id="Graphic_75">
+          <path d="M 480 250 L 875 250 C 877.7614 250 880 252.23858 880 255 L 880 390 C 880 392.76142 877.7614 395 875 395 L 480 395 C 477.2386 395 475 392.76142 475 390 L 475 255 C 475 252.23858 477.2386 250 480 250 Z" fill="#dadada"/>
+        </g>
+        <g id="Graphic_74">
+          <path d="M 495 265 L 665 265 C 667.7614 265 670 267.23858 670 270 L 670 310 C 670 312.76142 667.7614 315 665 315 L 495 315 C 492.2386 315 490 312.76142 490 310 L 490 270 C 490 267.23858 492.2386 265 495 265 Z" fill="#2c5771"/>
+          <text transform="translate(495 280.776)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="26.624" y="15" xml:space="preserve">Activity Diagram</tspan>
+          </text>
+        </g>
+        <g id="Graphic_73">
+          <path d="M 690 265 L 860 265 C 862.7614 265 865 267.23858 865 270 L 865 310 C 865 312.76142 862.7614 315 860 315 L 690 315 C 687.2386 315 685 312.76142 685 310 L 685 270 C 685 267.23858 687.2386 265 690 265 Z" fill="#2d5671"/>
+          <text transform="translate(690 280.776)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="18.032" y="15" xml:space="preserve">Use Case Diagram</tspan>
+          </text>
+        </g>
+        <g id="Graphic_72">
+          <path d="M 495 330 L 615 330 C 617.7614 330 620 332.23858 620 335 L 620 375 C 620 377.76142 617.7614 380 615 380 L 495 380 C 492.2386 380 490 377.76142 490 375 L 490 335 C 490 332.23858 492.2386 330 495 330 Z" fill="#2c5771"/>
+          <text transform="translate(495 336.552)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="8.432" y="15" xml:space="preserve">State Machine </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="29.92" y="33.448" xml:space="preserve">Diagram</tspan>
+          </text>
+        </g>
+        <g id="Graphic_71">
+          <path d="M 640 330 L 860 330 C 862.7614 330 865 332.23858 865 335 L 865 375 C 865 377.76142 862.7614 380 860 380 L 640 380 C 637.2386 380 635 377.76142 635 375 L 635 335 C 635 332.23858 637.2386 330 640 330 Z" fill="white"/>
+          <path d="M 640 330 L 860 330 C 862.7614 330 865 332.23858 865 335 L 865 375 C 865 377.76142 862.7614 380 860 380 L 640 380 C 637.2386 380 635 377.76142 635 375 L 635 335 C 635 332.23858 637.2386 330 640 330 Z" stroke="black" stroke-linecap="butt" stroke-linejoin="round" stroke-dasharray="8.0,5.0" stroke-width="1"/>
+          <text transform="translate(640 345.776)" fill="black">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="39.768" y="15" xml:space="preserve">Interaction Diagram</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Group_90">
+        <g id="Graphic_82">
+          <path d="M 480 445 L 875 445 C 877.7614 445 880 447.2386 880 450 L 880 585 C 880 587.7614 877.7614 590 875 590 L 480 590 C 477.2386 590 475 587.7614 475 585 L 475 450 C 475 447.2386 477.2386 445 480 445 Z" fill="#dadada"/>
+        </g>
+        <g id="Graphic_81">
+          <path d="M 495 460 L 665 460 C 667.7614 460 670 462.2386 670 465 L 670 505 C 670 507.7614 667.7614 510 665 510 L 495 510 C 492.2386 510 490 507.7614 490 505 L 490 465 C 490 462.2386 492.2386 460 495 460 Z" fill="#2c5771"/>
+          <text transform="translate(495 475.776)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="16.688" y="15" xml:space="preserve">Sequence Diagram</tspan>
+          </text>
+        </g>
+        <g id="Graphic_80">
+          <path d="M 690 460 L 860 460 C 862.7614 460 865 462.2386 865 465 L 865 505 C 865 507.7614 862.7614 510 860 510 L 690 510 C 687.2386 510 685 507.7614 685 505 L 685 465 C 685 462.2386 687.2386 460 690 460 Z" fill="#2d5671"/>
+          <text transform="translate(690 466.552)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="28.384" y="15" xml:space="preserve">Communication </tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="54.92" y="33.448" xml:space="preserve">Diagram</tspan>
+          </text>
+        </g>
+        <g id="Graphic_79">
+          <path d="M 495 525 L 665 525 C 667.7614 525 670 527.2386 670 530 L 670 570 C 670 572.7614 667.7614 575 665 575 L 495 575 C 492.2386 575 490 572.7614 490 570 L 490 530 C 490 527.2386 492.2386 525 495 525 Z" fill="#2c5771"/>
+          <text transform="translate(495 531.552)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="11.672" y="15" xml:space="preserve">Interaction Overview</tspan>
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="54.92" y="33.448" xml:space="preserve">Diagram</tspan>
+          </text>
+        </g>
+        <g id="Graphic_83">
+          <path d="M 690 525 L 860 525 C 862.7614 525 865 527.2386 865 530 L 865 570 C 865 572.7614 862.7614 575 860 575 L 690 575 C 687.2386 575 685 572.7614 685 570 L 685 530 C 685 527.2386 687.2386 525 690 525 Z" fill="#2c5771"/>
+          <text transform="translate(690 540.776)" fill="white">
+            <tspan font-family="Helvetica Neue" font-size="16" fill="white" x="28.688" y="15" xml:space="preserve">Timing Diagram</tspan>
+          </text>
+        </g>
+      </g>
+      <g id="Line_84">
+        <line x1="677.5" y1="200" x2="677.5" y2="243.1" marker-end="url(#SharpArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_85">
+        <line x1="222.5" y1="200" x2="222.5" y2="243.1" marker-end="url(#SharpArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_89">
+        <path d="M 865 355 L 910 355 L 910 517.5 L 886.95 517.5" marker-end="url(#SharpArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>
