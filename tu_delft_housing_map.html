@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TU Delft Housing — April 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBF8F3;
+    --paper-dark: #F0EBE0;
+    --ink: #1C1917;
+    --ink-soft: #57534E;
+    --rule: #D6CFC1;
+    --accent: #1E3A8A;        /* Delft blue */
+    --duwo: #B13E2C;          /* brick red */
+    --xior: #6B2338;          /* wine */
+    --fourfreedom: #1E3A8A;   /* delft blue */
+    --plaza: #78716C;         /* warm grey */
+    --socialhub: #292524;     /* ink */
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { display: flex; flex-direction: column; }
+  header {
+    padding: 20px 28px 18px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+  }
+  .brand h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-variation-settings: "opsz" 144;
+    font-size: clamp(24px, 3vw, 34px);
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1;
+  }
+  .brand h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-variation-settings: "opsz" 144;
+  }
+  .brand .meta {
+    margin: 6px 0 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ink);
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    border: 1.5px solid var(--paper);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+    display: inline-block;
+  }
+  .dot.duwo        { background: var(--duwo); }
+  .dot.xior        { background: var(--xior); }
+  .dot.fourfreedom { background: var(--fourfreedom); }
+  .dot.plaza       { background: var(--plaza); }
+  .dot.socialhub   { background: var(--socialhub); }
+
+  #map {
+    flex: 1;
+    width: 100%;
+    background: var(--paper-dark);
+  }
+
+  /* Numbered pin markers */
+  .pin-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pin {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FBF8F3;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    border: 2px solid var(--paper);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25), 0 3px 10px rgba(0,0,0,0.12);
+    transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1.2);
+    cursor: pointer;
+  }
+  .pin:hover {
+    transform: scale(1.18);
+    z-index: 1000;
+  }
+  .pin.p-duwo        { background: var(--duwo); }
+  .pin.p-xior        { background: var(--xior); }
+  .pin.p-fourfreedom { background: var(--fourfreedom); }
+  .pin.p-plaza       { background: var(--plaza); }
+  .pin.p-socialhub   { background: var(--socialhub); }
+
+  /* Popup styling */
+  .leaflet-popup-content-wrapper {
+    border-radius: 3px;
+    background: var(--paper);
+    box-shadow: 0 8px 28px rgba(28, 25, 23, 0.18);
+    border: 1px solid var(--rule);
+    padding: 0;
+  }
+  .leaflet-popup-tip { background: var(--paper); border: 1px solid var(--rule); }
+  .leaflet-popup-content {
+    margin: 18px 20px 16px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-width: 240px;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  .popup-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+  .popup-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .popup-name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 36;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .popup-provider {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+  .popup-provider::before {
+    content: "";
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-right: 7px;
+    vertical-align: 1px;
+    background: var(--pcolor, var(--duwo));
+  }
+  .popup-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 16px;
+    font-size: 12.5px;
+    margin-bottom: 14px;
+  }
+  .popup-grid dt {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    font-weight: 500;
+    padding-top: 2px;
+  }
+  .popup-grid dd {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .popup-link {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    letter-spacing: 0.04em;
+  }
+  .popup-link:hover { color: var(--ink); }
+
+  /* Attribution tweaks */
+  .leaflet-control-attribution {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 10px;
+    background: rgba(251, 248, 243, 0.85) !important;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 16px 18px 14px; }
+    .legend { font-size: 11px; gap: 4px 14px; }
+    .leaflet-popup-content { min-width: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <h1>TU Delft <em>Housing</em></h1>
+    <p class="meta">22 accommodations · Delft, NL · April 2026</p>
+  </div>
+  <nav class="legend" aria-label="Housing providers">
+    <span class="legend-item"><i class="dot duwo"></i>DUWO</span>
+    <span class="legend-item"><i class="dot xior"></i>Xior</span>
+    <span class="legend-item"><i class="dot fourfreedom"></i>4Freedom</span>
+    <span class="legend-item"><i class="dot plaza"></i>Plaza</span>
+    <span class="legend-item"><i class="dot socialhub"></i>The Social Hub</span>
+  </nav>
+</header>
+
+<main id="map" role="application" aria-label="Map of TU Delft student housing"></main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+/* ---------- DATA ---------- */
+const PROVIDER_COLOR = {
+  "DUWO":        { cls: "duwo",        hex: "#B13E2C" },
+  "Xior":        { cls: "xior",        hex: "#6B2338" },
+  "4Freedom":    { cls: "fourfreedom", hex: "#1E3A8A" },
+  "Plaza":       { cls: "plaza",       hex: "#78716C" },
+  "Social Hub":  { cls: "socialhub",   hex: "#292524" }
+};
+
+const LOCATIONS = [
+  { id: 1,  name: "Phoenixstraat 16",                   lat: 52.0102798, lng: 4.3551471,  provider: "Xior",       type: "Studio",            size: "13–34 m²", price: "€875–1000",  target: "Bachelor only",                          gmaps: "https://www.google.com/maps/place/Phoenixstraat+16,+2611+AL+Delft/@52.0096137,4.3536469,17.5z/data=!4m6!3m5!1s0x47c5b5c4010c0c35:0x4e9ea726f8b5ff34!8m2!3d52.0102798!4d4.3551471!16s%2Fg%2F11lh3wrynt" },
+  { id: 2,  name: "Polakweg 13A",                       lat: 52.0351750, lng: 4.3321207,  provider: "Plaza",      type: "Shared",            size: "13–34 m²", price: "€875–1000",  target: "Bachelor only",                          gmaps: "https://www.google.com/maps/place/Polakweg+13,+2288+GG+Rijswijk/@52.035175,4.3295458,16z/data=!3m1!4b1!4m6!3m5!1s0x47c5b685cead32f1:0x523c6863f81739ac!8m2!3d52.035175!4d4.3321207!16s%2Fg%2F11nntq6c5c" },
+  { id: 3,  name: "Aan 't Verlaat 31",                  lat: 52.0197772, lng: 4.3620751,  provider: "4Freedom",   type: "Shared",            size: "11–17 m²", price: "€650–900",   target: "Bachelor + Exchange (2 sem)",            gmaps: "https://www.google.com/maps/place/Aan+Het+Verlaat+31,+2612+XW+Delft/@52.0197772,4.3599233,17.25z/data=!4m6!3m5!1s0x47c5b5dde87e10f9:0xf0edac2da5af69e8!8m2!3d52.0197772!4d4.3620751!16s%2Fg%2F11cskywxgt" },
+  { id: 4,  name: "Aan 't Verlaat 33",                  lat: 52.0208911, lng: 4.3637924,  provider: "4Freedom",   type: "Shared",            size: "9–20 m²",  price: "€700–900",   target: "Bachelor + Exchange (2 sem)",            gmaps: "https://www.google.com/maps/place/Aan+Het+Verlaat+33,+2612+XW+Delft/@52.0208911,4.3612175,16z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5ddf0516313:0x6580f27d0844ba4!8m2!3d52.0208911!4d4.3637924!16s%2Fg%2F11c21f4tsc" },
+  { id: 5,  name: "Van Leeuwenhoekpark 1",              lat: 52.0063279, lng: 4.3576650,  provider: "Social Hub", type: "Standard Single",   size: "13 m²",    price: "€1150–1220", target: "Bachelor + Exchange",                    gmaps: "https://www.google.com/maps/place/Van+Leeuwenhoekpark+1,+2611+DW+Delft/@52.0063279,4.3550901,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b53c5bf066f1:0x51b1107477d92daa!8m2!3d52.0063279!4d4.357665!16s%2Fg%2F11pvgdx73z" },
+  { id: 6,  name: "César Franckstraat 5–178",           lat: 51.9949392, lng: 4.3359215,  provider: "DUWO",       type: "Shared",            size: "16–18 m²", price: "€536–585",   target: "Bachelor, Exchange, Programme",          gmaps: "https://www.google.com/maps/place/C%C3%A9sar+Franckstraat+39,+2625+BZ+Delft/@51.9949392,4.3333466,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5b29d442ad7:0x12303993de78c7b7!8m2!3d51.9949392!4d4.3359215!16s%2Fg%2F11c27_43lq" },
+  { id: 7,  name: "Lisztstraat 7–181",                  lat: 51.9953073, lng: 4.3380431,  provider: "DUWO",       type: "Shared",            size: "16–18 m²", price: "€480–585",   target: "Exchange + Programme",                   gmaps: "https://www.google.com/maps/place/Lisztstraat+9,+2625+BJ+Delft/@51.9953073,4.3354682,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5b271885a67:0x79fc9f877d4c5151!8m2!3d51.9953073!4d4.3380431!16s%2Fg%2F11c2f6zc9v" },
+  { id: 8,  name: "Balthasar van der Polweg 397–573",   lat: 51.9961303, lng: 4.3726767,  provider: "DUWO",       type: "Studio",            size: "28 m²",    price: "€983–1020",  target: "Master",                                 gmaps: "https://www.google.com/maps/place/Balthasar+van+der+Polweg+541,+Delft/@51.9961303,4.3701018,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b58e2cf741a3:0x4233ca8aebbfb2c1!8m2!3d51.9961303!4d4.3726767" },
+  { id: 9,  name: "Isaäc da Costalaan 349–431",         lat: 51.9959927, lng: 4.3601360,  provider: "DUWO",       type: "Shared",            size: "11–16 m²", price: "€506–630",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Isa%C3%A4c+Da+Costalaan+349,+2624+ZB+Delft/@51.9968668,4.3548252,15.75z/data=!4m6!3m5!1s0x47c5b597d0aea4cd:0xfc2c39bd9dbdbe78!8m2!3d51.9959927!4d4.360136!16s%2Fg%2F11c2g8g0h7" },
+  { id: 10, name: "Nicolaas Beetslaan 27–99",           lat: 51.9940481, lng: 4.3612350,  provider: "DUWO",       type: "Shared",            size: "11–16 m²", price: "€547–670",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Nicolaas+Beetslaan+27,+2624+XM+Delft/@51.9940481,4.3586601,16z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5978a594da5:0x86c2460a7735d3d2!8m2!3d51.9940481!4d4.361235!16s%2Fg%2F11cskrhphp" },
+  { id: 11, name: "Louis Couperuslaan 59–95",           lat: 51.9921383, lng: 4.3623374,  provider: "DUWO",       type: "Shared",            size: "11–16 m²", price: "€554–678",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Louis+Couperuslaan+59,+2624+WR+Delft/@51.9921383,4.3597625,16z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5984cccdd65:0x1bd8b8f0f7ff67a5!8m2!3d51.9921383!4d4.3623374!16s%2Fg%2F11c1y3lmwg" },
+  { id: 12, name: "Korvezeestraat 22–626",              lat: 51.9971148, lng: 4.3721566,  provider: "DUWO",       type: "Studio",            size: "27–28 m²", price: "€725–860",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Korvezeestraat,+Delft/@51.9971148,4.3695817,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b591def21ee3:0xbdf83343fdf735d2!8m2!3d51.9971148!4d4.3721566!16s%2Fg%2F1tgh24kd" },
+  { id: 13, name: "Leeghwaterstraat 64–346",            lat: 51.9973313, lng: 4.3713320,  provider: "DUWO",       type: "Shared",            size: "13–14 m²", price: "€626–640",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Leeghwaterstraat+66,+2628+LV+Delft/@51.9973313,4.3687571,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b591c179c7d5:0x8564695376ef9b80!8m2!3d51.9973313!4d4.371332" },
+  { id: 14, name: "Michiel de Ruyterweg 2–482",         lat: 52.0061240, lng: 4.3689800,  provider: "DUWO",       type: "Shared + Studio",   size: "10–27 m²", price: "€545–972",   target: "Master + Exchange (1 sem)",              gmaps: "https://www.google.com/maps/place/Michiel+de+Ruyterweg+2,+2628+JZ+Delft/@52.006124,4.3664051,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5ec9718be87:0xa20d976d4d494453!8m2!3d52.006124!4d4.36898!16s%2Fg%2F11f24wvk0q" },
+  { id: 15, name: "Röntgenweg 131–1035",                lat: 51.9994375, lng: 4.3577991,  provider: "DUWO",       type: "Studio",            size: "20–33 m²", price: "€802–883",   target: "Master, Exchange, Programme",            gmaps: "https://www.google.com/maps/place/R%C3%B6ntgenweg+131,+2624+WW+Delft/@52.0002526,4.3555899,16.25z/data=!4m6!3m5!1s0x47c5b5be77b92fd5:0x73ac7569417f5adf!8m2!3d51.9994375!4d4.3577991!16s%2Fg%2F11sgl7ppcg" },
+  { id: 16, name: "Professor Evertslaan 24 & 76",       lat: 52.0019223, lng: 4.3786093,  provider: "DUWO",       type: "Shared",            size: "9–18 m²",  price: "€520–622",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Professor+Evertslaan+24,+2628+XX+Delft/@52.0019223,4.3760344,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b58c929e62ff:0xbf3c72317507bd5c!8m2!3d52.0019223!4d4.3786093!16s%2Fg%2F11c20tk0tj" },
+  { id: 17, name: "Prof. Schermerhornstraat 13–121",    lat: 52.0079438, lng: 4.3676692,  provider: "DUWO",       type: "Shared",            size: "18 m²",    price: "€628–725",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Professor+Schermerhornstraat+121,+2628+PZ+Delft/@52.0079437,4.3627983,17z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5eb8c1a1375:0xeb2edb10bc5602db!8m2!3d52.0079438!4d4.3676692!16s%2Fg%2F11fm_klzpz" },
+  { id: 18, name: "Stieltjesweg 2–28",                  lat: 51.9999549, lng: 4.3756931,  provider: "DUWO",       type: "Shared",            size: "18 m²",    price: "€600–749",   target: "Master, Exchange, Programme",            gmaps: "https://www.google.com/maps/place/Stieltjesweg+20,+2628+CK+Delft/@51.9999549,4.3736451,18z/data=!3m1!4b1!4m6!3m5!1s0x47c5b58dc7c2a865:0xa2ad20eff694252d!8m2!3d51.9999549!4d4.3756931!16s%2Fg%2F11x01gq0ck" },
+  { id: 19, name: "Rotterdamseweg 139",                 lat: 52.0006633, lng: 4.3683776,  provider: "DUWO",       type: "Shared + Studio",   size: "13–25 m²", price: "€550–829",   target: "Bachelor + Exchange + Programme",        gmaps: "https://www.google.com/maps/place/Rotterdamseweg+139,+2628+AL+Delft/@52.0006633,4.3658027,16z/data=!3m1!4b1!4m6!3m5!1s0x47c5b59395c3f40b:0x3985c4070a9e87ac!8m2!3d52.0006633!4d4.3683776!16s%2Fg%2F11c1js_1pw" },
+  { id: 20, name: "Roland Holstlaan 5–749 (RolaHola)",  lat: 51.9960610, lng: 4.3539686,  provider: "DUWO",       type: "Studio",            size: "17–38 m²", price: "€700–900",   target: "Bachelor, Exchange, Programme",          gmaps: "https://www.google.com/maps/place/RolaHola,+Roland+Holstlaan+581,+2624+HC+Delft,+Netherlands/@51.996061,4.3539686,126m/" },
+  { id: 21, name: "Van Hasseltlaan 2–661",              lat: 51.9882746, lng: 4.3435612,  provider: "DUWO",       type: "Studio + Shared",   size: "9–23 m²",  price: "€460–700",   target: "Master, Bachelor, Exchange, Programme",  gmaps: "https://www.google.com/maps/place/Van+Hasseltlaan+656,+2625+JR+Delft/@51.9882746,4.3409863,16z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5a8c149ee3d:0xbb63972508b7c0f5!8m2!3d51.9882746!4d4.3435612!16s%2Fg%2F11c26vmptp" },
+  { id: 22, name: "Zusterlaan 110–268",                 lat: 52.0080212, lng: 4.3647758,  provider: "DUWO",       type: "Studio + Shared",   size: "13–35 m²", price: "€725–750",   target: "Master",                                 gmaps: "https://www.google.com/maps/place/Zusterlaan+136,+2611+MP+Delft/@52.0093584,4.3608476,16.25z/data=!3m1!4b1!4m6!3m5!1s0x47c5b5ea4cba9327:0xbab81b5088b2591b!8m2!3d52.0080212!4d4.3647758!16s%2Fg%2F11c1yd8126" }
+];
+
+/* ---------- MAP ---------- */
+const map = L.map("map", {
+  zoomControl: true,
+  scrollWheelZoom: true,
+  attributionControl: true
+});
+
+// CartoDB Positron tiles (clean, grayscale — lets pins pop)
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  subdomains: "abcd",
+  maxZoom: 20
+}).addTo(map);
+
+/* ---------- PINS ---------- */
+const markers = L.featureGroup().addTo(map);
+
+function pinIcon(number, providerCls) {
+  return L.divIcon({
+    className: "pin-wrap",
+    html: `<div class="pin p-${providerCls}" aria-label="Location ${number}">${number}</div>`,
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+    popupAnchor: [0, -14]
+  });
+}
+
+function popupHTML(loc) {
+  const pinfo = PROVIDER_COLOR[loc.provider];
+  return `
+    <div class="popup-head">
+      <span class="popup-num">№ ${String(loc.id).padStart(2, "0")}</span>
+      <h3 class="popup-name">${loc.name}</h3>
+    </div>
+    <p class="popup-provider" style="--pcolor:${pinfo.hex}">${loc.provider}</p>
+    <dl class="popup-grid">
+      <dt>Type</dt>    <dd>${loc.type}</dd>
+      <dt>Size</dt>    <dd>${loc.size}</dd>
+      <dt>Price/mo</dt><dd>${loc.price}</dd>
+      <dt>For</dt>     <dd>${loc.target}</dd>
+    </dl>
+    <a class="popup-link" href="${loc.gmaps}" target="_blank" rel="noopener">Open in Google Maps →</a>
+  `;
+}
+
+LOCATIONS.forEach(loc => {
+  const pinfo = PROVIDER_COLOR[loc.provider];
+  const marker = L.marker([loc.lat, loc.lng], {
+    icon: pinIcon(loc.id, pinfo.cls),
+    title: `${loc.id}. ${loc.name}`,
+    riseOnHover: true
+  });
+  marker.bindPopup(popupHTML(loc), { maxWidth: 320, minWidth: 240, closeButton: true });
+  marker.addTo(markers);
+});
+
+map.fitBounds(markers.getBounds(), { padding: [60, 60] });
+
+</script>
+</body>
+</html>
